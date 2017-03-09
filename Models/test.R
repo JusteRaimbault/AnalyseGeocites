@@ -21,5 +21,5 @@ authors = sapply(unlist(test[,1]),function(s){
 
 # umr authors from author file
 # -> where is the fucking link table between authors, axes and equipes ?
-
+# 
 
