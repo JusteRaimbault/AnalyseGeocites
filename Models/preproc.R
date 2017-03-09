@@ -12,7 +12,7 @@ year = sapply(test$surtitre,function(s){l=strsplit(s,',')[[1]];res=as.numeric(gs
 
 # export data for citation network construction
 #write.table(data.frame(test$V1,rep("",nrow(test)),year),file='data.csv',sep = ';',quote = FALSE,row.names = FALSE,col.names = FALSE)
-write.table(data.frame(raw$titre,rep("",nrow(raw)),year),file='data/fulldata.csv',sep = ';',quote = FALSE,row.names = FALSE,col.names = FALSE)
+write.table(data.frame(raw$titre,rep("",nrow(raw)),year),file='data/citation/fulldata.csv',sep = ';',quote = FALSE,row.names = FALSE,col.names = FALSE)
 
 
 delstrings<-function(todel,s){
@@ -26,7 +26,7 @@ delstrings<-function(todel,s){
 # get authors
 authorsid = sapply(raw$surtitre,function(s){
   l=strsplit(s,',')[[1]];
-  simpl = sapply(l[1:(length(l)-1)],function(a){return(delstrings(c("(",")","COORD","Dir","dir","."," "),a))})
+  simpl = sapply(l[1:(length(l)-1)],function(a){return(delstrings(c("(",")","COORD","Dir","dir","ed.","."," "),a))})
   inds = sapply(simpl,function(s){nchar(s)>3})
   return(simpl[inds])
 }) 
@@ -66,7 +66,7 @@ collauthors = sapply(authorsid,function(s){paste0(s,collapse=',')})
 
 
 # write data
-write.table(data.frame(id=raw$id,titre=raw$titre,auteurs=collauthors,typepubli=typepubli,equipe=equipe,thematic=thematic,axe=axe),file='data/publications.csv',sep=";",quote = FALSE,row.names = FALSE,col.names = TRUE)
+write.table(data.frame(id=raw$id,titre=raw$titre,auteurs=collauthors,year=year,typepubli=typepubli,equipe=equipe,thematic=thematic,axe=axe),file='data/publications.csv',sep=";",quote = FALSE,row.names = FALSE,col.names = TRUE)
 
 
 ## auteurs table

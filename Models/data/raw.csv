@@ -38,10 +38,10 @@ id;surtitre;titre
 5457;FOL S., 2012;The socio-spatial dimensions of urban shrinkage
 5458;DUCRUET C., NOTTEBOOM T., 2012;Developing liner service networks in container shipping
 5459;GIVONI M., DOBRUSZKES F., LUGO I., 2012;Uncovering the Real Potential for Air-Rail Substitution - An Exploratory Analysis Energy
-5460;BESSE J.M., 2012;Schématisations de l'espace et formes de l'écriture géographique au tournant des 16e et 17e siècles en Europe
-5461;BESSE J.M., 2012;Mise en oeuvre et diffusion du modèle de l'atlas dans les cultures scientifiques et artistiques modernes en Europe
-5463;BESSE J.M., 2012;Longer l'espace: le paysage et l'expérience de la marche
-5464;BESSE J.M., 2012;Early modern geographical atlases: graphic spaces and cognitive practices
+5460;BESSE J.-M., 2012;Schématisations de l'espace et formes de l'écriture géographique au tournant des 16e et 17e siècles en Europe
+5461;BESSE J.-M., 2012;Mise en oeuvre et diffusion du modèle de l'atlas dans les cultures scientifiques et artistiques modernes en Europe
+5463;BESSE J.-M., 2012;Longer l'espace: le paysage et l'expérience de la marche
+5464;BESSE J.-M., 2012;Early modern geographical atlases: graphic spaces and cognitive practices
 5506;LE NECHET F., 2012;Urban spatial structure, daily mobility and energy consumption: a study of 34 European cities
 5507;DUCRUET C., NOTTEBOOM T., 2012;The worldwide maritime network of container shipping: spatial structure and regional dynamics
 5508;MOHAMED-CHERIF F.Z., DUCRUET C., 2012;Du global au local : les nouveaux gérants des terminaux portuaires algériens
@@ -54,7 +54,7 @@ id;surtitre;titre
 5548;FRETIGNY J.-B. , 2012;Aéroport : non-lieu ou point d'ancrage du Monde ?
 5550;FEN-CHONG J., MATHIAN H., BOULIER J., OLTEANU A.-M. , 2012;Révéler les structures urbaines à partir des communications mobiles
 5552;FEN-CHONG J., LOBBE Q., BILCKE J. , 2012;Revealing foreign visitors mobility practices in Paris using mobile phone data
-5559;BANOS., 2012;Network effects in Schelling's model of segregation: new evidence from agent-based simulation 
+5559;BANOS A., 2012;Network effects in Schelling's model of segregation: new evidence from agent-based simulation 
 5564;REY S., SCHMITT C., 2012;Guided and automated exploration for the calibration of an agent based model
 5568;PLEVEN B., 2012;La représentation des suburbs dans les séries télévisées états-uniennes, communication personnelle sur le thème « habiter l'inhabitable »
 5589;GODILLON S., 2012;<em>La rénovation urbaine, une opportunité de réduire les inégalités socio-spatiales d'être impliqué dans un accidents dans les espaces publics</em> 
@@ -65,7 +65,7 @@ id;surtitre;titre
 5626;BOICHOT C., 2012;Urban spaces of creativity. The spatialization of Contemporary art places and networks in Paris and Berlin
 5629;MAULAT J., 2012;The Implementation of Rail-Oriented Development in Suburban Areas : from Theory to Practice. The Case of Toulouse's West Railway Corridor
 5640;FRETIGNY J.-B. , 2012;<em>L'usage de l'espace aéroportuaire par les passagers à Paris Charles-de-Gaulle</em>
-5655;BESSE J.M., 2012;La circulation des savoirs géographiques en Europe à la fin du XVIe siècle : lieux, chemins, objets
+5655;BESSE J.-M., 2012;La circulation des savoirs géographiques en Europe à la fin du XVIe siècle : lieux, chemins, objets
 5658;HALBERT L., CICILLE P., PUMAIN D., ROZENBLAT C., 2012;<em>Quelles métropoles en Europe ? Analyse comparée, synthèse</em>
 5659;MORENO D., BADARIOTTI D., BANOS A., 2012;Un automate cellulaire pour expérimenter les effets de la proximité dans le processus d'étalement urbain : le modèle Raumulus
 5664;CHARREIRE H. WEBER C., CHAIX B., SALZE P., CASEY R., BANOS A., BADARIOTTI D., KESSE-GUYOT E., HERCBERG S., SIMON C., OPPERT J.-M., 2012;Identifying builg environmental patterns using cluster analysis and GIS: Relationships with walking, cycling and body mass index in French adults
@@ -97,7 +97,7 @@ id;surtitre;titre
 6265;DOUAY N., 2012;Urbanisme 2.0, de la contestation à la participation
 6266;MATHIAN H., SANDERS L. (ED), 2012;Construction et re-construction d'information géographique
 6267;SANDERS L., 2012;Regards croisés de géographes, économistes et archéologues sur la hiérarchie des systèmes de peuplement : de l'empirie aux systèmes complexes
-6268;FAVORY F., NUNINGER L. SANDERS L., 2012;Intégration de concepts de géographie et d'archéologie spatiale pour l'étude des systèmes de peuplement
+6268;FAVORY F., NUNINGER L., SANDERS L., 2012;Intégration de concepts de géographie et d'archéologie spatiale pour l'étude des systèmes de peuplement
 6269;DUCRUET C., 2012;Visualisation et analyse du réseau maritime mondial depuis le XVIIIe siècle
 6270;DUPUY G., 2012;Quels déplacements dans la ville de demain ?
 6271;FLEURY A., 2012;La gentrification au prisme de l'action sur les espaces publics 
@@ -140,8 +140,8 @@ id;surtitre;titre
 6308;REUILLON R., REY S., SCHMITT C., LECLAIRE M., PUMAIN D., 2012;Algorithmes évolutionnaires sur grille de calcul pour le calibrage de modèles  géographiques.
 6309;RAAD L., 2012;Housing Policy and social change in communist-run municipalities in the suburbs of Paris
 6310;MANTRAN M., ANGEON V., BONIN M., DIMAN J.-L., FANCHONE A., 2012;L'agriculture aux Antilles Françaises : vers un retour aux productions destinées au marché local ?
-6311;COMMENGES, HADRIEN, 2012;Exploiter le contenu séquentiel et temporel des Enquêtes Ménages Déplacements
-6312;COMMENGES, HADRIEN, 2012;R workflow integration by example: studying daily mobility
+6311;COMMENGES H., 2012;Exploiter le contenu séquentiel et temporel des Enquêtes Ménages Déplacements
+6312;COMMENGES H., 2012;R workflow integration by example: studying daily mobility
 6313;NG A.K.Y., DUCRUET C., 2012;Port geography bibliometrics (1950-2011): Community structure, background, and diffusion
 6314;DUCRUET C., 2012;The polarization of global container flows by interoceanic canals
 6315;DUCRUET C., ITOH H., JOLY O., 2012;Material flows and local economic structure: Port-region linkages in Europe, Japan, and the United States
@@ -163,8 +163,8 @@ id;surtitre;titre
 6331;VALLEE J., KESTENS Y., 2012;Espaces de mobilité, représentations de l'espace et accessibilité aux équipements : une relation dynamique et réciproque. 
 6332;MANCEAU E, JOUANLANNE TH., 2012;Compétitivité et cohésion territoriale deux défis à relever en Seine-Saint-Denis
 6333;MANCEAU E. , 2012;Le local comme remède à la crise ? L'exemple des projets urbain intégrés en région Campanie
-6334;VILA-VÁZQUEZ, J.-I., 2012;Analyzing Social Transformations Induced by Flagship Projects in European Cities at a Fine Spatial Scale
-6335;PÉREZ-INDAVEREA, M.-A., VILA-VÁZQUEZ, J.-I., 2012;Learning from Signature and Media Architectures: Reflections of a Cultural and Economic Scenario
+6334;VILA-VÁZQUEZ J.-I., 2012;Analyzing Social Transformations Induced by Flagship Projects in European Cities at a Fine Spatial Scale
+6335;PÉREZ-INDAVEREA, M.-A., VILA-VÁZQUEZ J.-I., 2012;Learning from Signature and Media Architectures: Reflections of a Cultural and Economic Scenario
 6336;RHEIN C., 2012;Middle strata and their housing positions in metropolitan Paris (1982-2007)
 6337;COTTINEAU C., 2012;A simulation tool for assessing the specificity of the evolutionary path of Russian cities
 6338;FROUILLOU L., 2012;Higher education planning policies and student segregation between universities in the paris urban region
@@ -176,7 +176,7 @@ id;surtitre;titre
 6344;DELAGE M., FLEURY A., 2012;Commerces et centralités touristiques à Paris
 6345;FLEURY A., FROMENT-MEURICE M., 2012;Embellir et dissuader : les politiques d'espaces publics à Paris
 6346;ROSEMBERG M., 2012;Une exploration géographique de la ville avec la littérature. Réflexions méthodologiques
-6347;VILA-VÁZQUEZ, J.-I., 2012;Estudiando la viabilidad de los flagship projects urbanos: modelos de gobernanza en ciudades europeas
+6347;VILA-VÁZQUEZ J.-I., 2012;Estudiando la viabilidad de los flagship projects urbanos: modelos de gobernanza en ciudades europeas
 6348;ROSEMBERG M., 2012;Géographie et littérature
 6349;DREVELLE M., 2012;Un BHNS pas comme les autres : le Car à Haut Niveau de Service
 6350;BEZIAT A., DREVELLE M., DESJARDINS X., HEITZ A., GOLDBERG J., LAROSE F., 2012;L'accessibilité aux emplois par le chemin de fer en Ile-de-France de 1975 à demain : vers une réduction des écarts sociaux ? 
@@ -197,7 +197,7 @@ id;surtitre;titre
 6366;VERDIER N., 2012;Entre publicité, débat scientifique et vulgarisation : Jean-Baptiste d'Anville dans le Mercure...
 6367;VERDIER N., 2012;Géographie française et traduction : quelque cas du XVIIIe à nos jours
 6368;VERDIER N., OZOUF-MARIGNIER M.-V., 2012;Le Modèle Français : les mutations de la trame administrative : 1789-2010
-6369;BILLEN G., GARNIER J., BARLES S. (ED), 2012;<em>History of the urban environmental imprint</em>
+6369;BILLEN G., GARNIER J., BARLES S., 2012;<em>History of the urban environmental imprint</em>
 6370;RIVIÈRE D., 2012;<em>Rome</em>
 6371;MANTRAN M., 2012;<em>Contribution du lien social à la capacité de réponse des agriculteurs face aux chocs : exemple de la Guadeloupe</em>
 6372;LE BOZEC A., BARLES S., BUCLET N., KECK G., 2012;<em>Que faire des déchets ménagers ?</em>
@@ -212,7 +212,7 @@ id;surtitre;titre
 6381;BRETAGNOLLE A., GIRAUD T., VERDIER N. , 2012;<em>Le rôle du réseau postal dans l'accessibilité des lieux de la France pré-industrielle</em>
 6382;TROUDE A., 2012;L'instrumentalisation des héros dans les guerres balkaniques
 6383;BOGNON S., BARLES S. , 2012;<em>Nourrir les villes du 21ème siècle : De nouvelles proximités alimentaires</em>
-6384;GIRAULT J.A., BOURGUIGNON J.P., DE MARSILY G., ENCRENAZ T., JOUSSAUME S. PUMAIN D., 2012;<em>Risques potentiels de l'exploration et de l'exploitation des hydrocarbures non conventionnels en Ile-de-France</em>
+6384;GIRAULT J.A., BOURGUIGNON J.P., DE MARSILY G., ENCRENAZ T., JOUSSAUME S., PUMAIN D., 2012;<em>Risques potentiels de l'exploration et de l'exploitation des hydrocarbures non conventionnels en Ile-de-France</em>
 6385;DUCRUET C., JOLY O., LE CAM M., 2012;<em>Maritime flows</em>
 6388;AVILA DE SOUSA A, COTTINEAU C, DIETERSDORFER L, FERNANDEZ AGUEDA B, GONUL D, HOEMKE M, JAROSZEWSKA E, LELLA I, MYKHNENKO V, PRADA TRIGO J, SCHMITZ S, VOLKMANN A, WIECHMANN T, WOLFF M., 2012;<em>Mapping urban shrinkage in Europe </em>
 6389;BRETAGNOLLE A., GUEROIS M., MATHIAN H., GIRAUD T., AVERLAN G., 2012;<em>Naming U.M.Z.: a database now operational for urban studies. Rapport final du projet ESPON Database 2013.</em>
@@ -327,7 +327,7 @@ id;surtitre;titre
 6620;BARLES S., 2013;L'ingénierie urbaine avant Belgrand
 6621;BARLES S., 2013;Métabolismes urbains
 6622;BARLES S., 2013;Résilience urbaine et transition socio-écologique
-6623;PETSIMERIS P., VILA-VÁZQUEZ, J.-I. et CAPUTO M.-L., 2013;Territorial Dissimilarities in Poverty and Exclusion
+6623;PETSIMERIS P., VILA-VÁZQUEZ J.-I. et CAPUTO M.-L., 2013;Territorial Dissimilarities in Poverty and Exclusion
 6624;BARLES S., 2013;Assainir et nourrir, des enjeux urbains convergents, France, XIXe siècle
 6625;GEORGEAULT L., JUNQUA G., ADOUE C., BARLES S., GABARRELL X., BORDIN P., 2013;Computational system based on GIS and LCA For identification, environmental and cost analysis of synergies: Case of shared additional water tank storages for fire prevention
 6626;ELISSALDE B., SANTAMARIA F., JEANNE Ph., 2013;Harmony and melody in European discourse
@@ -439,8 +439,8 @@ id;surtitre;titre
 6882;KOSMOPOULOS C., 2015;<em>Study on the quantitative assessment of performance in Social Sciences and Humanities</em>
 6885;DASSA M., KOSMOPOULOS C., 2013;<em>Les revues en SHS et leurs référencements dans le WOS, Scopus, l'AERES, ERIH</em>
 6888;KOSMOPOULOS C., PUMAIN D., 2012;Cybergeo and the consumer Society
-6923;KOSMOPOULOS, 2015;Report Project on Study on the quantitative assessment of performance in Social Sciences and Humanities
-6924;KOSMOPOULOS et al, 2015;<em>Le libre accès : une révolution scientifique pour les pays du Sud ?</em>
+6923;KOSMOPOULOS C., 2015;Report Project on Study on the quantitative assessment of performance in Social Sciences and Humanities
+6924;KOSMOPOULOS C., 2015;<em>Le libre accès : une révolution scientifique pour les pays du Sud ?</em>
 6948;COMMENGES H., 2015;Mesurer les pratiques modales et la dépendance automobile : à la recherche de congruence entre mesure et interprétation
 6949;PISTRE P., COMMENGES H., GUERRERO D., PROULHAC L., 2015;Définitions opérationnelles du temps pour l’analyse des données longitudinales
 6950;ALBECKER M.-F., 2015;La banlieue parisienne, périphérie réinvestie ?
@@ -992,7 +992,7 @@ id;surtitre;titre
 7524;ORAIN O., 2015;<em>Mai 68 et l'évolution des sciences</em>
 7525;REPELLIN P., DURET B., BARLES S. , 2014;<em>Comptabilité des flux de matières dans les régions et les départements. Guide méthodologique</em>
 7526;BRES A., 2015;<em>Figures discrètes de l'urbain</em>
-7528; BESSE J.-M., PALSKY G., 2014;<em>Le monde sur une feuille. Les tableaux comparatifs de montagnes et de fleuves dans les atlas du XIXe siècle </em>
+7528;BESSE J.-M., PALSKY G., 2014;<em>Le monde sur une feuille. Les tableaux comparatifs de montagnes et de fleuves dans les atlas du XIXe siècle </em>
 7529;BESSE J.-M., 2014;<em>O gosto do mundo. Exercicios de paisagem</em>
 7530;BESSE J.-M., 2013;<em>Habiter. Un monde à mon image</em>
 7533;BOUCHERON P., FUMEY G., GRATALOUP C., 2014;<em>L’Atlas global </em>
@@ -1384,7 +1384,7 @@ id;surtitre;titre
 8014;DUPUY G., 2016;Entretien avec Jean-François Troin
 8015;DUPUY G., 2016;Réseaux et territoire, une question évolutive pour la recherche
 8016;DUPUY G., 2016;Les réseaux dans les territoires, du génie urbain à la ville durable
-8017;DUPUY G., TROIN J.-F., QUÉVA C., FOURAULT-CAUET V., 2016;<em>Une rencontre avec J.F. Troin, auteur de La planète des Z'u</em>
+8017;DUPUY G., TROIN J.-F., QUEVA C., FOURAULT-CAUET V., 2016;<em>Une rencontre avec J.F. Troin, auteur de La planète des Z'u</em>
 8018;DUROUDIER S., 2016;Comprendre les formes des séparations socio-spatiales dans les villes intermédiaires des États-Unis
 8019;DUROUDIER S., 2016;La ségrégation raciale des villes américaines diminue-t-elle toujours ?
 8020;FEN-CHONG J., CHASSET P.-O., BANOS A., QUEYROI F., SMOREDA Z., 2016;Exploring alternate traffic circulation effects in Île-de-France Region using aggregated mobile phone data: is it still useful to use mobile phone data?
@@ -1610,4 +1610,4 @@ id;surtitre;titre
 8241;ZERAH M. H., DENIS E., 2017;Introduction: Reclaiming Small Towns
 8242;PUMAIN D., 2017;Geography far from equilibrium
 8245;LE BIGOT B., 2016;Le 'tour du monde' des backpackers, voyage normalisé?
-8244;BRAVARD J.-P., LESPEZ L., FOURAULT-CAUET V., QUÉVA C., 2016;<em>Une rencontre avec J.P. Bravard, auteur de Pour saluer le Rhône</em>
+8244;BRAVARD J.-P., LESPEZ L., FOURAULT-CAUET V., QUEVA C., 2016;<em>Une rencontre avec J.P. Bravard, auteur de Pour saluer le Rhône</em>

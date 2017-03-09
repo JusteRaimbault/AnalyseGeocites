@@ -1,0 +1,124 @@
+
+# Analyse basique de la structure des publis
+
+
+```{r include = FALSE}
+# setup
+
+library(dplyr)
+
+setwd(paste0(Sys.getenv('CS_HOME'),'/Misc/AnalyseGeocites/Models'))
+
+
+# authors
+authors <- as.tbl(read.csv('data/authors.csv',sep=";",stringsAsFactors = FALSE))
+
+# publis
+publis <- as.tbl(read.csv('data/publications.csv',sep=";",stringsAsFactors = FALSE))
+
+# attributes
+properties <- as.tbl(read.csv('data/properties.csv',sep=";",stringsAsFactors = FALSE))
+
+axes = properties$nameshort[properties$type=='axe']
+
+```
+
+
+## Stats basique
+
+### Publis hors axe
+```{r} 
+100*length(which(publis$axe=='hors_axe'))/nrow(publis)`
+```
+
+### Distrib of interaxe collabs
+
+```{r}
+axe_num = sapply(publis$axe,function(s){length(strsplit(s,',')[[1]])})
+hist(axe_num,breaks=5)
+```
+
+
+### Interequipes
+
+```{r}
+eq_num = sapply(publis$equipe,function(s){length(strsplit(s,',')[[1]])})
+hist(eq_num,breaks=5)
+```
+
+
+Interéquipe dans le temps ?
+
+
+
+
+
+## Interne/externe
+
+Publis with one author
+```{r}
+hist(sapply(publis$auteurs,function(s){length(strsplit(s,',')[[1]])}),breaks=50,xlab="number of authors",main="")
+```
+
+Internal rate for each publi with more than one author :
+```{r}
+isumr = authors$umr;names(isumr)<-authors$id
+
+internrate<-function(teams){
+  res=c()
+  for(team in teams){
+    res=append(res,sapply(publis$auteurs[publis$equipe==team],function(s){
+      auths = strsplit(s,',')[[1]];
+      currentumr = isumr[auths];
+      if(length(currentumr)>1){return(sum(currentumr)/length(currentumr))}else{return(NA)}
+    })
+    )
+  }
+  return(res)
+}
+hist(internrate(c("CRIA","EHGO","PARIS")),breaks=50)
+hist(internrate(c("CRIA")),breaks=50)
+hist(internrate(c("EHGO")),breaks=50)
+hist(internrate(c("PARIS")),breaks=50)
+#mean(internrate,na.rm = T)
+```
+
+
+
+
+## Export graph axes gexf
+
+```{r}
+library(rgexf)
+# id,label
+nodes = data.frame(id=axes,label=axes)
+e1=c();e2=c();for(n1 in nodes$id){for(n2 in nodes$id){e1=append(e1,n1);e2=append(e2,n2)}}
+edges=data.frame(e1,e2)
+# edges : id1,id2
+# weights -> by publi number ; or by author ? -> the first is the second but weighted
+counts=list()
+for(a1 in axes){for(a2 in axes){counts[[paste0(a1,a2)]]=0}}
+for(i in 1:nrow(publis)){
+  axes = publis$axe[i];year=publis
+  currentaxes = strsplit(axes,',')[[1]]
+  if(length(currentaxes)>1){
+    for(a1 in currentaxes){for(a2 in currentaxes){counts[[paste0(a1,a2)]]=counts[[paste0(a1,a2)]]+1}}
+  }
+}
+
+write.gexf(nodes=nodes,
+           edges=edges,
+           edgesWeight=weights,
+           edgeDynamic=data.frame(years,years+0.99),
+           output=''
+)
+```
+
+
+
+
+
+
+
+
+
