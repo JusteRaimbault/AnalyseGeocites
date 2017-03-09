@@ -1,0 +1,134 @@
+ZRINSCAK G.                ZANIN C.             ZAMORANO G.           WORONIECKI M. 
+            "ZRINSCAKG"                "ZANINC"             "ZAMORANOG"           "WORONIECKIM" 
+               WOLFF D.             WASTABLE M.               VOLVEY A.              VERDIER N. 
+               "WOLFFD"             "WASTABLEM"               "VOLVEYA"              "VERDIERN" 
+  VACCHIANI-MARCUZZO C.           TROUILLARD E.           TISSIER J.-L.              TILLOUS M. 
+  "VACCHIANI-MARCUZZOC"           "TROUILLARDE"            "TISSIERJ-L"              "TILLOUSM" 
+             TESSIER F.            SPYRELLIS S.               SOL M.-P.           SEKULOVSKI G. 
+             "TESSIERF"            "SPYRELLISS"                "SOLM-P"           "SEKULOVSKIG" 
+             SEGURET S.              SCHMOLL C.              SCHMITT C.           SANTAMARIA F. 
+             "SEGURETS"              "SCHMOLLC"              "SCHMITTC"           "SANTAMARIAF" 
+             SANDERS L.          SAINTEVILLE M.         SAINT-JULIEN T.                SAADA A. 
+             "SANDERSL"          "SAINTEVILLEM"         "SAINT-JULIENT"                "SAADAA" 
+               RUFAT S.            ROSEMBERG M.            ROLLET J.-M.             ROBIC M.-C. 
+               "RUFATS"            "ROSEMBERGM"             "ROLLETJ-M"              "ROBICM-C" 
+             RIVIÈRE D.                RHEIN C.              REYNAUD L.                  REY S. 
+             "RIVIÈRED"                "RHEINC"              "REYNAUDL"                  "REYS" 
+              PUMAIN D.           PRÉVÉLAKIS G.               POUSIN F.         POTHITAKI I.-V. 
+              "PUMAIND"           "PRÉVÉLAKISG"               "POUSINF"          "POTHITAKII-V" 
+             PLANQUE G.               PISTRE P.           PETSIMERIS P.                PETIT S. 
+             "PLANQUEG"               "PISTREP"           "PETSIMERISP"                "PETITS" 
+      PERROT-NANI A.-S.               PALSKY G.                ORAIN O.              NEYROUD M. 
+       "PERROT-NANIA-S"               "PALSKYG"                "ORAINO"              "NEYROUDM" 
+               MURAT J.              MORBOIS E.             MENDIBIL D.        MATHIEU-HUBER D. 
+               "MURATJ"              "MORBOISE"             "MENDIBILD"        "MATHIEU-HUBERD" 
+             MATHIAN H.            MARROUCHI S.         MARDIROSSIAN F.              MANCEAU E. 
+             "MATHIANH"            "MARROUCHIS"         "MARDIROSSIANF"              "MANCEAUE" 
+              LOUAIL T.                LIZZI L.               LESECQ G.            LE TEXIER M. 
+              "LOUAILT"                "LIZZIL"               "LESECQG"             "LETEXIERM" 
+          LE NEINDRE C.            LE NECHET F.              LE GOIX R.           LAU-BIGNON A. 
+           "LENEINDREC"             "LENECHETF"               "LEGOIXR"           "LAU-BIGNONA" 
+             LAPORTE A.         LAMBOURDIERE E.              LABORDE M.              LABINAL G. 
+             "LAPORTEA"         "LAMBOURDIEREE"              "LABORDEM"              "LABINALG" 
+         KOSMOPOULOS C.             KAZARIAN N.       HUMAIN-LAMOURE A.              HALLAIR G. 
+         "KOSMOPOULOSC"             "KAZARIANN"       "HUMAIN-LAMOUREA"              "HALLAIRG" 
+            GUERRERO D.              GUÉROIS M.          GUERIN-PACE F.            GRATALOUP C. 
+            "GUERREROD"              "GUÉROISM"          "GUERIN-PACEF"            "GRATALOUPC" 
+            GRASLAND C.    GOUYOU-BEAUCHAMPS M.                GOSME C.             GODILLON S. 
+            "GRASLANDC"    "GOUYOU-BEAUCHAMPSM"                "GOSMEC"             "GODILLONS" 
+              GILLOT G. GÉNEAU de LAMARLIÈRE I.               GAZULL L.          FRETIGNY J.-B. 
+              "GILLOTG"   "GÉNEAUdeLAMARLIÈREI"               "GAZULLL"           "FRETIGNYJ-B" 
+         FRANÇOIS J.-C.                  FOL S.               FLEURY A.                 FIEGEL  
+          "FRANÇOISJ-C"                  "FOLS"               "FLEURYA"                "FIEGEL" 
+            FERRETTI F.            FEN-CHONG J.            FAVARO J.-M.                FABRE E. 
+            "FERRETTIF"            "FEN-CHONGJ"             "FAVAROJ-M"                "FABREE" 
+           ESTEBANEZ J.        DURAND-DASTES F.                DUPUY G.              DUCRUET C. 
+           "ESTEBANEZJ"        "DURAND-DASTESF"                "DUPUYG"              "DUCRUETC" 
+               DUCOM E.                DUBUC S.               DUBOIS A.                DOUAY N. 
+               "DUCOME"                "DUBUCS"               "DUBOISA"                "DOUAYN" 
+          DOBRUSZKES F.              DJAMENT G.            DEVRIENDT A.           DESJARDINS X. 
+          "DOBRUSZKESF"              "DJAMENTG"            "DEVRIENDTA"           "DESJARDINSX" 
+             DEPREST F.               DELAGE M.              DEL PUP H.               DEGOUT V. 
+             "DEPRESTF"               "DELAGEM"               "DELPUPH"               "DEGOUTV" 
+             DEBARRE S.               CUYALA S.               CRULLI T.    COURONNE-GEARY L.-M. 
+             "DEBARRES"               "CUYALAS"               "CRULLIT"     "COURONNE-GEARYL-M" 
+           COMMENGES H.             COMIN M.-N.            COLLIGNON B.              COLDEFY M. 
+           "COMMENGESH"              "COMINM-N"            "COLLIGNONB"              "COLDEFYM" 
+             CLERVAL A.                CLERC P.         CHEVALIER J.-P.          CHARPENTIER A. 
+             "CLERVALA"                "CLERCP"          "CHEVALIERJ-P"          "CHARPENTIERA" 
+           CHAMPIGNY J.               CATTAN N.             CAPDEPUY V.               CALLEN D. 
+           "CHAMPIGNYJ"               "CATTANN"             "CAPDEPUYV"               "CALLEND" 
+             CALENGE P.               BUXEDA C.               BUHNIK S.                BUARD E. 
+             "CALENGEP"               "BUXEDAC"               "BUHNIKS"                "BUARDE" 
+         BRETAGNOLLE A.               BOULOC C.              BOULIER J.              BOUINOT J. 
+         "BRETAGNOLLEA"               "BOULOCC"              "BOULIERJ"              "BOUINOTJ" 
+              BORDIN P.               BOMATI E.              BOICHOT C.            BLANCHARD E. 
+              "BORDINP"               "BOMATIE"              "BOICHOTC"            "BLANCHARDE" 
+               BLAIS H.                BEYER A.             BESSE J.-M.              BERROIR S. 
+               "BLAISH"                "BEYERA"              "BESSEJ-M"              "BERROIRS" 
+           BEN REBAH M.           BEAUGUITTE L.             BEAUCIRE F.    BAYINDIR GOULARAS G. 
+            "BENREBAHM"           "BEAUGUITTEL"             "BEAUCIREF"     "BAYINDIRGOULARASG" 
+       BAUDET-MICHEL S.                BARON M.                BANOS A.              BAHOKEN F. 
+       "BAUDET-MICHELS"                "BARONM"                "BANOSA"              "BAHOKENF" 
+               ANDRE E.          ALBECKER M.-F.                AMARA M.             ANDRIEUX F. 
+               "ANDREE"           "ALBECKERM-F"                "AMARAM"             "ANDRIEUXF" 
+             BAKBASA C.           BAUDINAULT A.               BÉNARD F.             CAKANLAR Y. 
+             "BAKBASAC"           "BAUDINAULTA"               "BÉNARDF"             "CAKANLARY" 
+  CASANAS-CARBALLIDO J.                CHAMP A.            CHASSAGNE P.                 DHÉE F. 
+  "CASANAS-CARBALLIDOJ"                "CHAMPA"            "CHASSAGNEP"                 "DHÉEF" 
+            DREVELLE M.                DUTEL F.             GAGNIÈRE V.              JAMAULT C. 
+            "DREVELLEM"                "DUTELF"             "GAGNIÈREV"              "JAMAULTC" 
+                LAOT B.                LAZAR M.     LEININGER-FREZAL C.             LESTEVEN G. 
+                "LAOTB"                "LAZARM"     "LEININGER-FREZALC"             "LESTEVENG" 
+              MAULAT J.                MEHDI A.              MINSTER C.          NGUIA KAHMA W. 
+              "MAULATJ"                "MEHDIA"              "MINSTERC"           "NGUIAKAHMAW" 
+              PERSYN N.               PLEVEN B.              PLEVRIS K.                 RAAD L. 
+              "PERSYNN"               "PLEVENB"              "PLEVRISK"                 "RAADL" 
+                REMY S.              SAARELA S.                SPIRI J.               TROUDE A. 
+                "REMYS"              "SAARELAS"                "SPIRIJ"               "TROUDEA" 
+              VALLÉE J.              VANNIER C.      VIEILLARD-BARON E.                VERON O. 
+              "VALLÉEJ"              "VANNIERC"      "VIEILLARD-BARONE"                "VERONO" 
+     VILA-VÁZQUEZ J.-I.                WATEL R.               BLIDON M.               SWERTS E. 
+      "VILA-VÁZQUEZJ-I"                "WATELR"               "BLIDONM"               "SWERTSE" 
+              BARLES S.                QUEVA C.                BAFFI S.             BOULARAN Z. 
+              "BARLESS"                "QUEVAC"                "BAFFIS"             "BOULARANZ" 
+           CAPUTO M.-L.            COTTINEAU C.        IGNAZZI COSMO A.             LIU CHUN Y. 
+            "CAPUTOM-L"            "COTTINEAUC"         "IGNAZZICOSMOA"              "LIUCHUNY" 
+           TOUREILLE E.                 BRUN G.             COQUELLE J.             ESKANDER A. 
+           "TOUREILLEE"                 "BRUNG"             "COQUELLEJ"             "ESKANDERA" 
+              OLMEDO E.               CITRON P.            FROUILLOU L.           GEORGEAULT L. 
+              "OLMEDOE"               "CITRONP"            "FROUILLOUL"           "GEORGEAULTL" 
+              BOGNON S.        KANELLOPOULOU D.              MANTRAN M.                  KIM E. 
+              "BOGNONS"        "KANELLOPOULOUD"              "MANTRANM"                  "KIME" 
+               MARTY P.       FAKHARIAN GHOM B.                SIVAK H.            BROOMBERG J. 
+               "MARTYP"        "FAKHARIANGHOMB"                "SIVAKH"            "BROOMBERGJ" 
+              PERNET A.               SIMOES L.                 BRES A.              MANTRAN M. 
+              "PERNETA"               "SIMOESL"                 "BRESA"              "MANTRANM" 
+      AVELINE-DUBACH N.               BAUDRY S.             BERNADOU D.             CHALONGE L. 
+      "AVELINE-DUBACHN"               "BAUDRYS"             "BERNADOUD"             "CHALONGEL" 
+                CURA R.               DEBRIE J.            DELAVILLE D.                DENIS E. 
+                "CURAR"               "DEBRIEJ"            "DELAVILLED"                "DENISE" 
+   DESCLAUX-SALACHAS J.                  DOS S.       DUBOS-PAILLARD E.            DUROUDIER S. 
+   "DESCLAUX-SALACHASJ"                  "DOSS"       "DUBOS-PAILLARDE"            "DUROUDIERS" 
+             FINANCE O.               GAUJAL S.       GEORGIKOPOULOS I.                GIMAT M. 
+             "FINANCEO"               "GAUJALS"       "GEORGIKOPOULOSI"                "GIMATM" 
+              GIRAUD A.              GRAVIER J.               GUÉRIN A.                 KAHN S. 
+              "GIRAUDA"              "GRAVIERJ"               "GUÉRINA"                 "KAHNS" 
+             LAMBERT A.              LAMENIE B.               LANGAR A.             LE BIGOT B. 
+             "LAMBERTA"              "LAMENIEB"               "LANGARA"              "LEBIGOTB" 
+            LE CORRE T.                LEHEC E.             LEPESANT G.                LOPEZ P. 
+             "LECORRET"                "LEHECE"             "LEPESANTG"                "LOPEZP" 
+              MAGNAN M.               MALNAR D.             NAHASSIA L.                PATTE M. 
+              "MAGNANM"               "MALNARD"             "NAHASSIAL"                "PATTEM" 
+               SIMON D.           SKOUFOGLOU E.       PIERRE-MAGNANI C.              QUEYROI F. 
+               "SIMOND"           "SKOUFOGLOUE"       "PIERRE-MAGNANIC"              "QUEYROIF" 
+            THEBAULT E.      VIANA CERQUEIRA E.     HIRSCHHAUSEN B. von               PICHON M. 
+            "THEBAULTE"       "VIANACERQUEIRAE"      "HIRSCHHAUSENBvon"               "PICHONM" 
+               GOMES E.                SINNO M.              TABBITA J. KOSOWSKA-STAMIROWSKA Z. 
+               "GOMESE"                "SINNOM"              "TABBITAJ" "KOSOWSKA-STAMIROWSKAZ" 
+           RAIMBAULT J.            ZDANOWSKA N.            VERHAEGHE L.                TELLE O. 
+           "RAIMBAULTJ"            "ZDANOWSKAN"            "VERHAEGHEL"                "TELLEO" 
+            LECLAIRE M.             REUILLON R.                HACHI R.             PLATTARD O. 
+            "LECLAIREM"             "REUILLONR"                "HACHIR"             "PLATTARDO" 
+              OTT A.-C.             DUBREUIL A.             NUSSBAUM F. 
+               "OTTA-C"             "DUBREUILA"             "NUSSBAUMF" 
