@@ -96,13 +96,13 @@ e1=c();e2=c();for(n1 in nodes$id){for(n2 in nodes$id){e1=append(e1,n1);e2=append
 edges=data.frame(e1,e2)
 # edges : id1,id2
 # weights -> by publi number ; or by author ? -> the first is the second but weighted
-counts=list()
-for(a1 in axes){for(a2 in axes){counts[[paste0(a1,a2)]]=0}}
+counts=list();
+for(a1 in axes){for(a2 in axes){for(y in unique(publis$year)){counts[[paste0(a1,a2,y)]]=0}}}
 for(i in 1:nrow(publis)){
   axes = publis$axe[i];year=publis
   currentaxes = strsplit(axes,',')[[1]]
   if(length(currentaxes)>1){
-    for(a1 in currentaxes){for(a2 in currentaxes){counts[[paste0(a1,a2)]]=counts[[paste0(a1,a2)]]+1}}
+    for(a1 in currentaxes){for(a2 in currentaxes){counts[[paste0(a1,a2,publis$year[i])]]=counts[[paste0(a1,a2,publis$year[i])]]+1}}
   }
 }
 

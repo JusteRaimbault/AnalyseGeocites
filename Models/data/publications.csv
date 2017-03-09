@@ -555,7 +555,7 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 7071;Cohort Profile: The Interdisciplinary Study of Inequalities in Smoking (ISIS);FROHLICHK,SHARECKM,VALLEEJ,ABELT,AGOURIR,CANTINOTTIM,DANIELM,DASSAC,DATTAG,GAGNET,LECLERCB,KESTENSY,O'LOUGHLINJ,POTVINL;2015;article_revue;PARIS;;1b_territ_metro,3b_explo_modelisation
 7072;Inégalités socio-spatiales de risque d'accident en tant que piéton : un cumul de facteurs individuels et contextuels;GODILLONS,VALLEEJ;2015;article_revue;PARIS;;1b_territ_metro,3b_explo_modelisation
 7073;The world and Europe in the eyes of Turkish undergraduate students;GUERIN-PACEF,TOUREILLEE,GRASLANDC;2014;article_revue;PARIS;;2b_systemes_villes,4b_union_europeenne
-7074;Jenseits politischer Zäsuren? Berliner Phantomgrenzen in aktuellen Praktiken und Diskursen;HIRSCHHAUSENBvon,GARRIDOC,HOCQUETM;2015;article_revue;PARIS;;4b_union_europeenne
+7074;Jenseits politischer Zäsuren? Berliner Phantomgrenzen in aktuellen Praktiken und Diskursen;HIRSCHHAUSENBVON,GARRIDOC,HOCQUETM;2015;article_revue;PARIS;;4b_union_europeenne
 7075;Comprendre le territoire européen. Deux outils cartographiques à l’appui de la réflexion en aménagement du territoire;LAMBERTN,YSEBAERT,ZANINC;2015;article_revue;PARIS;;2b_systemes_villes,6b_ecriture_geo
 7076;Diversité et complémentarité des modèles multi-agents en sciences sociales;LIVETP,PHAND,SANDERSL;2014;article_revue;PARIS;;3b_explo_modelisation
 7077;Temporalités et objets géographiques;MATHIANH,SANDERSL;2015;article_revue;PARIS;;3b_explo_modelisation
@@ -706,7 +706,7 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 7234;Malte;BERNARDIETAHIR,SCHMOLLC;2015;chapitre;PARIS;;hors_axe
 7235;Mobilité géographique et réussite au Brevet des collèges dans l'agglomération parisienne;FRANCOISJC,BOULARANZ,CIESIELSKIH,MATHIANH,SANDERSL;2015;chapitre;PARIS;;3b_explo_modelisation
 7236; Modélisation par SMA de la structuration sociale de l'espace scolaire: une ontologie intégrée mais non réductrice de plusieurs points de vue méthodologiques;FRANCOISJC,MATHIANH,SANDERSL,WALDECKR,BULLEN,PHAND;2014;chapitre;PARIS;;3b_explo_modelisation
-7237;Phantomgrenzen in Östlichen Europa. Eine wissenschaftliche Positionierung;GRANDITSH,HIRSCHHAUSENBvon,KRAFTCMÜLLERD,SERRIERT;2015;chapitre;PARIS;;4b_union_europeenne
+7237;Phantomgrenzen in Östlichen Europa. Eine wissenschaftliche Positionierung;GRANDITSH,HIRSCHHAUSENBVON,KRAFTCMÜLLERD,SERRIERT;2015;chapitre;PARIS;;4b_union_europeenne
 7238;Le test ontologique : un outil de médiation pour la modélisation agent   ;LIVETP,SANDERSL;2014;chapitre;PARIS;;3b_explo_modelisation
 7239;Interaction d’ontologies informatique et géographique pour simuler les dynamiques multiscalaires;LOUAILT,PUMAIND;2014;chapitre;PARIS;;3b_explo_modelisation
 7240;Système ville et système de villes : modèles dynamiques en archéologie et en géographie ;MATHIANH,RODIERX,SANDERSL;2014;chapitre;PARIS;;3b_explo_modelisation
@@ -727,7 +727,7 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 7255;Knowledge industry and competitiveness: Economic trajectories of French Cities since the 1960s;VACCHIANI-MARCUZZOC,PAULUSF;2015;chapitre;PARIS;;2b_systemes_villes
 7256;Mobilité quotidienne et accès potentiel aux ressources urbaines en Île-de-France : quelles inégalités sociales ?;VALLEEJ,COMMENGESH,PERCHOUXC,KESTENSY,CHAIXB;2015;chapitre;PARIS;;1b_territ_metro,3b_explo_modelisation
 7257;Viability of Flagship Projects as Models of Urban Regeneration: The Representation of Space through the Discourse of the Actors;VILA-VÁZQUEZJ-I;2014;chapitre;PARIS;;1b_territ_metro
-7258;Phantomgrenzen zwischen Erfahrungsraum und Erwartungshorizont. Konzeptionelle Reflexionen an einem empirischen Beispiel;HIRSCHHAUSENBvon;2015;chapitre;PARIS;;4b_union_europeenne
+7258;Phantomgrenzen zwischen Erfahrungsraum und Erwartungshorizont. Konzeptionelle Reflexionen an einem empirischen Beispiel;HIRSCHHAUSENBVON;2015;chapitre;PARIS;;4b_union_europeenne
 7259;Recycling Paris' and New York's first suburbs : globalization, social change and public policies ;ALBECKERM-F;2015;communication;CRIA;;1b_territ_metro,2b_systemes_villes
 7260;Decline, globalization and urban policies in Paris’ and New York’s first suburbs ;ALBECKERM-F;2014;communication;CRIA;;1b_territ_metro,2b_systemes_villes
 7261;The boom in China’s property market, a comparaison with the Japanese ‘land bubble’ from the perspective of the developmental state ;AVELINE-DUBACHN;2015;communication;CRIA;;hors_axe
@@ -850,9 +850,9 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 7380;Modéliser des systèmes complexes entre géographie, archéologie et informatique : réflexions de trois jeunes chercheurs;CURAR,GRAVIERJ,NAHASSIAL;2014;communication;PARIS;;3b_explo_modelisation
 7381;The ethical and pedagogical possibilities for phenomenological research on socio-spatial inequalities in health;GLENNN,FROHLICHK,VALLEEJ;2015;communication;PARIS;;1b_territ_metro,3b_explo_modelisation
 7382;La Méditerranée dans la division régionale du Monde;GRASLANDC,TOUREILLEE;2015;communication;PARIS;;2b_systemes_villes,4b_union_europeenne
-7383;Phantom borders: a heuristic metaphore;HIRSCHHAUSENBvon;2014;communication;PARIS;;4b_union_europeenne
-7384;Berlin par-delà les ruptures – Vivre, raconter et produire les matières de la ville;HIRSCHHAUSENBvon,GARRIDOC,HOCQUETM;2015;communication;PARIS;;1b_territ_metro
-7385;Umbrüche und neue Raumordnungen: 1918, 1945, 1989;HIRSCHHAUSENBvon,HASLINGERP,BUCHENT,WARDENGAU;2014;communication;PARIS;;4b_union_europeenne
+7383;Phantom borders: a heuristic metaphore;HIRSCHHAUSENBVON;2014;communication;PARIS;;4b_union_europeenne
+7384;Berlin par-delà les ruptures – Vivre, raconter et produire les matières de la ville;HIRSCHHAUSENBVON,GARRIDOC,HOCQUETM;2015;communication;PARIS;;1b_territ_metro
+7385;Umbrüche und neue Raumordnungen: 1918, 1945, 1989;HIRSCHHAUSENBVON,HASLINGERP,BUCHENT,WARDENGAU;2014;communication;PARIS;;4b_union_europeenne
 7386;Environments, Mobility, Social Networks, and Healthy Aging: A Cohort Study Involving Wearable Sensors;KESTENSY,CHAIXB,GAUVINL,GERBERP,LORDS,PAYETTEH,RICHARDL,VALLEEJ;2015;communication;PARIS;;1b_territ_metro,3b_explo_modelisation
 7387;Un regard comparatif sur les concepts mobilisés pour penser les périphéries urbaines (Europe, Amérique du Nord) ;LEGOIXR,QUEVAC;2015;communication;PARIS;;1b_territ_metro
 7388;Modeling the emergence of metropolitan transport autorithy in a polycentric urban region;LENECHETF,RAIMBAULTJ;2015;communication;PARIS;;1b_territ_metro
@@ -958,11 +958,11 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 7489;Neighborhood change in suburban and ex-urban areas in the Paris metropolitan region;LEGOIXR;2015;conf_invite;PARIS;;1b_territ_metro
 7490;Private Property, No Trespassing: A Comparative Perspective on Gated Communities in Paris and Los Angeles;LEGOIXR;2013;conf_invite;PARIS;;1_recompo_territoire_metro
 7491;<em>Atlas de New York. Crises et renaissances d'une pionnière (2de édition)</em>;LEGOIXR;2013;ouvrage;PARIS;;1_recompo_territoire_metro
-7492;Has the space a memory? Revisiting a old question;HIRSCHHAUSENBvon;2015;conf_invite;PARIS;;4b_union_europeenne
-7493;Les ‘frontières fantômes’ : questionner les longues durées de l’espace centre- et est-européen;HIRSCHHAUSENBvon;2014;conf_invite;PARIS;;4b_union_europeenne
-7494;Les frontières fantômes : étude empirique en Roumanie et essai d’interprétation;HIRSCHHAUSENBvon;2014;conf_invite;PARIS;;4b_union_europeenne
-7495;Podiumsdiskussion : Vom Nützen der Areas in Zeiten der Globalisierung;HIRSCHHAUSENBvon,KRAFTC,BALDAUFI,COSTAS,ECKERTA;2015;conf_invite;PARIS;;4b_union_europeenne
-7496;Podiumsdiskussion : Wohin verschwinden die Grenzen?;HIRSCHHAUSENBvon,KRAFTC,MÜLLERD,SPRODOWSKI;2015;conf_invite;PARIS;;4b_union_europeenne
+7492;Has the space a memory? Revisiting a old question;HIRSCHHAUSENBVON;2015;conf_invite;PARIS;;4b_union_europeenne
+7493;Les ‘frontières fantômes’ : questionner les longues durées de l’espace centre- et est-européen;HIRSCHHAUSENBVON;2014;conf_invite;PARIS;;4b_union_europeenne
+7494;Les frontières fantômes : étude empirique en Roumanie et essai d’interprétation;HIRSCHHAUSENBVON;2014;conf_invite;PARIS;;4b_union_europeenne
+7495;Podiumsdiskussion : Vom Nützen der Areas in Zeiten der Globalisierung;HIRSCHHAUSENBVON,KRAFTC,BALDAUFI,COSTAS,ECKERTA;2015;conf_invite;PARIS;;4b_union_europeenne
+7496;Podiumsdiskussion : Wohin verschwinden die Grenzen?;HIRSCHHAUSENBVON,KRAFTC,MÜLLERD,SPRODOWSKI;2015;conf_invite;PARIS;;4b_union_europeenne
 7497;La situation politique et les défis sociaux des Balkans occidentaux;TROUDEA;2015;conf_invite;PARIS;;4b_union_europeenne
 7498;Políticas de Competitividade Urbana e o Caso de Bilbao;VILA-VÁZQUEZJ-I;2014;conf_invite;PARIS;;1b_territ_metro,4b_union_europeenne
 7499;Unha aproximación xeográfica á análise dos asentamentos de poboación en Galicia;VILA-VÁZQUEZJ-I;2014;conf_invite;PARIS;;1b_territ_metro,4c_reversibilite_proximite
@@ -982,7 +982,7 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 7514;<em>Espace et rapports de domination</em>;CLERVALA,FLEURYA,REBOTIERJ,WEBERS;2015;dir_ouvrage;PARIS;;1b_territ_metro
 7515;<em>Fonder les sciences du territoire</em>;BECKOUCHEP,GRASLANDC,GUERIN-PACEF,MOISSERONJ-Y;2012;dir_ouvrage;PARIS;;hors_axe
 7516;<em>Métropoles et régions, entre concurrences et complémentarités, Regards croisés France-Italie</em>;CREMASCHIM,DELPIROUA,RIVIÈRED,SALONEC;2015;dir_ouvrage;PARIS;;1b_territ_metro
-7517;<em>Phantomgrenzen - Räume und Akteure in der Zeit neu denken</em>;HIRSCHHAUSENBvon,GRANDITSH,KRAFTC,MÜLLERD,SERRIERT;2015;dir_ouvrage;PARIS;;4b_union_europeenne
+7517;<em>Phantomgrenzen - Räume und Akteure in der Zeit neu denken</em>;HIRSCHHAUSENBVON,GRANDITSH,KRAFTC,MÜLLERD,SERRIERT;2015;dir_ouvrage;PARIS;;4b_union_europeenne
 7518;<em>Données urbaines 7</em>;MATTEIM-F,PUMAIND;2015;dir_ouvrage;PARIS;;1b_territ_metro
 7519;<em>La modélisation des dynamiques spatiales</em>;SANDERSL,RUASA;2015;dir_ouvrage;PARIS;;3b_explo_modelisation
 7520;<em>Migrations en Méditerranée</em>;SCHMOLLC,THIOLLETH,WIHTOLDEWENDENC;2015;dir_ouvrage;PARIS;;4b_union_europeenne
@@ -1049,8 +1049,8 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 7586;<em>Bulletin de l'Association des Géographes Français</em>;LEGOIXR;2014;divers;PARIS;;1b_territ_metro
 7587;<em>Une rencontre avec Michel Lussault : L’Avènement du Monde. Essai sur l’habitation humaine de la Terre </em>;DIMÉOG,FOURAULT-CAUËTV,QUEVAC;2014;divers;PARIS;;1b_territ_metro
 7588;<em>Une rencontre avec Philippe Bachimon, auteur de Vacance des lieux </em>;DIMÉOG,QUEVAC;2014;divers;PARIS;;1b_territ_metro
-7589;<em>Des régions historiques au ‘frontières fantômes’ : comment penser les géographies de l’Europe médiane dans la durée</em>;HIRSCHHAUSENBvon;2015;communication;PARIS;;4b_union_europeenne
-7590;<em>Koselleck au secours des ‘frontières fantômes’ réinterroger l’énigme des mémoires spatiales</em>;HIRSCHHAUSENBvon;2014;divers;PARIS;;4b_union_europeenne
+7589;<em>Des régions historiques au ‘frontières fantômes’ : comment penser les géographies de l’Europe médiane dans la durée</em>;HIRSCHHAUSENBVON;2015;communication;PARIS;;4b_union_europeenne
+7590;<em>Koselleck au secours des ‘frontières fantômes’ réinterroger l’énigme des mémoires spatiales</em>;HIRSCHHAUSENBVON;2014;divers;PARIS;;4b_union_europeenne
 7591;Une rencontre avec Augustin Berque, auteur de La mésologie, pour quoi faire ?;LAZZAROTTIO,FOURAULT-CAUËTV,QUEVAC;2015;article_revue;PARIS;;4c_reversibilite_proximite
 7592;<em>La politique interventionniste des Etats-Unis en Serbie</em>;TROUDEA;2015;communication;PARIS;;4b_union_europeenne
 7593;Les déchets urbains, une invention récente;BARLESS;2015;vulgarisation;CRIA;;4c_reversibilite_proximite
@@ -1195,7 +1195,7 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 7825;Pour une analyse comparative des réformes régionales en France et en Tunisie. Esquisse d’un cadre théorique et méthodologique d’observation des territoires vécus.;GRASLANDC,BARONM,BENNASRA,DERUFFRAYS,ZANINC;2015;communication;PARIS;;4b_union_europeenne
 7826;Construction d'un baromètre géomédiatique international à l'aide de flux RSS;GRASLANDC,GIRAUDT,LAMBERTN,PECOUTH,DERUFFRAYS;2015;communication;PARIS;;2b_systemes_villes
 7827;An interdisciplinary approach of urban evolution over long periods of time : theoretical and methodological aspects;GRAVIERJ;2015;communication;PARIS;;3b_explo_modelisation
-7828;<em>Phantomgrenzen in Ostmitteleuropa : Zwischenbilanz und neu Perspektiven. Rapport pour le BmBF- Bundesministerium für Bildung und Forschung (Ministère fédéral allemand de la formation et la recherche)</em>;HIRSCHHAUSENBvon,LöwisS,CASANOVAK;2015;rapport;PARIS;4_mobilite;4b_union_europeenne
+7828;<em>Phantomgrenzen in Ostmitteleuropa : Zwischenbilanz und neu Perspektiven. Rapport pour le BmBF- Bundesministerium für Bildung und Forschung (Ministère fédéral allemand de la formation et la recherche)</em>;HIRSCHHAUSENBVON,LöwisS,CASANOVAK;2015;rapport;PARIS;4_mobilite;4b_union_europeenne
 7829;Comments on Melis et al. The Effects of the Urban Built Environment on Mental Health: A Cohort Study in a Large Northern Italian City. ;KESTENSY,CHAIXB,SHARECKM,VALLEEJ;2015;article;PARIS;4_mobilite;1b_territ_metro,3b_explo_modelisation
 7830;Saisonniers du temps libre: modalités socio-spatiales de la présence des 'hivernants' européens au Maroc;LEBIGOTB;2015;chapitre;PARIS;4_mobilite;1b_territ_metro
 7831;<em>Finances-Marchés immobiliers- Représentations sociales de l’espace : aborder la question de la valeur</em>;LECORRET;2015;divers;PARIS;;1b_territ_metro
@@ -1426,11 +1426,11 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 8056;Interroger la taille des villes sur le temps long : explorations statistiques et spatiales des surfaces et des populations de l’espace urbain dans le nord de la France;GRAVIERJ;2016;communication;PARIS;;2b_systemes_villes,3b_explo_modelisation
 8058;Les temps de transport pour délimiter des aires urbaines fonctionnelles ? Une investigation critique à partir de trois métropoles européennes;GUÉROISM,PAVARDA,BRETAGNOLLEA,MATHIANH;2016;article_revue;PARIS;;2b_systemes_villes,3b_explo_modelisation
 8059;From street network analysis to urban history;HACHIR;2016;communication;PARIS;4_mobilite;3b_explo_modelisation
-8060;Einführung zur Podiumsdiskussion: „Osteuropa in Bewegung: Flucht und Migration im historischen Vergleich“ [Introduction à la discussion: l’Europe orientale en mouvement: réfugiés et migrations dans une perspective historique];HIRSCHHAUSENBvon;2016;communication;PARIS;4_mobilite;4b_union_europeenne
-8061;Interventionslandschaft aus der Perspektive einigen französischen Geographen [Le concept de „Interventionslandschaft  au regard de géographes francais];HIRSCHHAUSENBvon;2016;communication;PARIS;4_mobilite;4b_union_europeenne
-8062;Du besoin de nouvelles postures théoriques pour penser les longues durées géoculturelles;HIRSCHHAUSENBvon;2016;communication;PARIS;4_mobilite;4b_union_europeenne
-8063;Bilanz eines 6 jährigen Projekt und neueröffneten Perspektiven [Bilan de six années de Projets et perspectives ouvertes];HIRSCHHAUSENBvon;2016;communication;PARIS;4_mobilite;4b_union_europeenne
-8064;Trouble dans les aires culturelles. Perspectives ouvertes par les fantômes géographiques;HIRSCHHAUSENBvon;2016;conf_invite;PARIS;4_mobilite;4b_union_europeenne
+8060;Einführung zur Podiumsdiskussion: „Osteuropa in Bewegung: Flucht und Migration im historischen Vergleich“ [Introduction à la discussion: l’Europe orientale en mouvement: réfugiés et migrations dans une perspective historique];HIRSCHHAUSENBVON;2016;communication;PARIS;4_mobilite;4b_union_europeenne
+8061;Interventionslandschaft aus der Perspektive einigen französischen Geographen [Le concept de „Interventionslandschaft  au regard de géographes francais];HIRSCHHAUSENBVON;2016;communication;PARIS;4_mobilite;4b_union_europeenne
+8062;Du besoin de nouvelles postures théoriques pour penser les longues durées géoculturelles;HIRSCHHAUSENBVON;2016;communication;PARIS;4_mobilite;4b_union_europeenne
+8063;Bilanz eines 6 jährigen Projekt und neueröffneten Perspektiven [Bilan de six années de Projets et perspectives ouvertes];HIRSCHHAUSENBVON;2016;communication;PARIS;4_mobilite;4b_union_europeenne
+8064;Trouble dans les aires culturelles. Perspectives ouvertes par les fantômes géographiques;HIRSCHHAUSENBVON;2016;conf_invite;PARIS;4_mobilite;4b_union_europeenne
 8065;Understanding the role of contrasting urban contexts in healthy aging: An international cohort study using wearable sensor devices (The CURHA study protocol);KESTENSY,CHAIXB,GERBERP,DESPRÈSM,GAUVINL,KLEINO,KLEINS,KÖPPENB,LORDS,NAUDA,PAYETTEH,RICHARDL,RONDIERP,SHARECKM,SUEURC,THIERRYB,VALLEEJ,WASFIR;2016;article_revue;PARIS;4_mobilite;1b_territ_metro,3b_explo_modelisation
 8066;Measuring life spaces to understand how urban contexts impact healthy aging: Comparing questionnaires and GPS tracking.;KESTENSY,CHAIXB,GERBERP,GAUVINL,LORDS,NAUDA,PAYETTEH,RONDIERP,THIERRYB,VALLEEJ,WASFIR;2016;communication;PARIS;4_mobilite;1b_territ_metro,3b_explo_modelisation
 8067;Evolving structure of the maritime trade network : evidence from the Lloyd’s Shipping Index (1890-2000);KOSOWSKA-STAMIROWSKAZ,DUCRUETC,RAIN;2016;article_revue;PARIS;;2b_systemes_villes
@@ -1598,7 +1598,7 @@ id;titre;auteurs;year;typepubli;equipe;thematic;axe
 8229;Réussir malgré tout ? Adaptations et fragilités des commerçants face au changement urbain en Seine-Saint-Denis;FLEURYA;2017;communication;PARIS;;1b_territ_metro
 8230;Données massives et information géographique;GIRAUDT,GRASLANDC,GUÉROISM,MADELINM,SEVEROM;2017;vulgarisation;PARIS;;2b_systemes_villes
 8231;Réformes régionales en France et en Tunisie. Éléments théoriques et méthodologiques pour cerner les territoires perçus;GRASLANDC,BARONM,BENNASRA,BRENNETOTA,DERUFFRAYS,ZANINC;2017;article_revue;PARIS;;4b_union_europeenne
-8232;<em>Wahrnehmen, Erfahren, Gestalten. Phantomgrenzen und soziale Raumproduktion. [Les frontières fantômes et la production sociale des espaces : entre perception, expérience et mise en forme]</em> (avec Michael Esch) ;HIRSCHHAUSENBvon;2017;dir_ouvrage;PARIS;4_mobilite;4b_union_europeenne
+8232;<em>Wahrnehmen, Erfahren, Gestalten. Phantomgrenzen und soziale Raumproduktion. [Les frontières fantômes et la production sociale des espaces : entre perception, expérience et mise en forme]</em> (avec Michael Esch) ;HIRSCHHAUSENBVON;2017;dir_ouvrage;PARIS;4_mobilite;4b_union_europeenne
 8233;Some reflections on comparing (post-)suburbs in the US and France (Chapter 12);LEGOIXR;2017;chapitre;PARIS;;1b_territ_metro
 8234;Amour sacré, amour profane. L'espace des cartes comme allégorie;PALSKYG;2017;chapitre;EHGO;;6b_ecriture_geo
 8235;Carte, temps et récit;PALSKYG;2017;chapitre;EHGO;;6b_ecriture_geo

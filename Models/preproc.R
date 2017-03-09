@@ -76,6 +76,8 @@ authorsbase = unlist(authors)
 
 umrids = sapply(properties$nameshort[properties$type=="author"],function(s){gsub(" ","",gsub(".","",s,fixed=TRUE))})
 umrnames = sapply(properties$name[properties$type=="author"],trimws)
+umrshortnames = properties$nameshort[properties$type=="author"]
+
 
 externals = setdiff(authorsid,umrids)
 
@@ -86,7 +88,21 @@ for(id in authorsid){
 names(fullnames)<-authorsid
 #length(fullnames[externals])
 
-write.table(data.frame(id=c(umrids,externals),fullname=c(umrnames,fullnames[externals]),umr=c(rep(1,length(umrids)),rep(0,length(externals)))),file='data/authors.csv',sep=";",quote = FALSE,row.names = FALSE,col.names = TRUE)
+# get status
+status <- as.tbl(read.csv(file='data/status.csv',sep=';',quote ="",stringsAsFactors = FALSE,header=TRUE))
+#left_join(status,data.frame(MembreUMR=umrnames,id=umrids,stringsAsFactors = FALSE))
+#status$id = sapply(status$MembreUMR,function(s){gsub(" ","",gsub(".","",s,fixed=TRUE))})
+#jstatus = semi_join(status,data.frame(MembreUMR=umrshortnames,id=umrids),by="MembreUMR")
+#length(which(!is.na(jstatus$Statut)))
+#nopubli=c("HAULE S.","DIDELON C.","ZIOLKOWSKA J.","ERKAN D.","CHASSET P.-O.","GOURDON P.","HERCULE C.",
+#          "LASSAUBE U","HAYAT F.","WANG P.","REISER C.","MIGOZZI J.","LOSAVIO C.","GENEAU I.","PREVELAKIS G.",
+#          "JACQUET R.","JEAN-JACQUES  S.","LASSAUBE U.","LE ROUZIC V.","MONDAIN M.","METGE M.","CAILLOL D.",
+#          "VILA VAZQUEZ J.","NAVARO A.","AUGISEAU V.","RIGOLLET N.","SAADIA S.","LI M.")
+#setdiff(status$MembreUMR[which(sapply(status$MembreUMR,function(s){!(s%in%umrshortnames)}))],nopubli)
+nstatus = status$Statut
+names(nstatus)<-status$MembreUMR
+
+write.table(data.frame(id=c(umrids,externals),fullname=c(umrnames,fullnames[externals]),umr=c(rep(1,length(umrids)),rep(0,length(externals))),status=c(nstatus[umrshortnames],rep(NA,length(externals)))),file='data/authors.csv',sep=";",quote = FALSE,row.names = FALSE,col.names = TRUE)
 
 
 
