@@ -291,10 +291,10 @@ for(year in allyears){
   adjacency = as.matrix(as_adjacency_matrix(g,type = "both"))
   axesprobas = authorsProbas(V(g)$name,8,axes,c(year));teamprobas = authorsProbas(V(g)$name,6,teams,c(year))
  interaxes = t(axesprobas)%*%adjacency%*%axesprobas
- for(axe in axes){if(sum(interaxes[axe,])>0){rate=interaxes[axe,axe]/sum(interaxes[axe,]);
+ for(axe in axes){if(sum(interaxes[axe,])>0){rate=sum(interaxes[axe,axe])/sum(interaxes[axe,]);
  ccoefs=append(ccoefs,rate);types=append(types,"axes");years=append(years,year);ccoefnames=append(ccoefnames,paste0(axe,year))}}
  interteams = t(teamprobas)%*%adjacency%*%teamprobas
- for(team in teams){if(sum(interteams[team,])>0){rate=interteams[team,team]/sum(interteams[team,]);
+ for(team in teams){if(sum(interteams[team,])>0){rate=sum(interteams[team,team])/sum(interteams[team,]);
  ccoefs=append(ccoefs,rate);types=append(types,"equipes");years=append(years,year);ccoefnames=append(ccoefnames,paste0(team,year))}}
 }
 names(ccoefs)<-ccoefnames
