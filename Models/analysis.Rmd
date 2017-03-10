@@ -6,6 +6,7 @@
 # setup
 
 library(dplyr)
+library(ggplot2)
 
 setwd(paste0(Sys.getenv('CS_HOME'),'/Misc/AnalyseGeocites/Models'))
 
@@ -16,10 +17,15 @@ authors <- as.tbl(read.csv('data/authors.csv',sep=";",stringsAsFactors = FALSE))
 # publis
 publis <- as.tbl(read.csv('data/publications.csv',sep=";",stringsAsFactors = FALSE))
 
+# filter on type publis
+publis = publis[publis$typepubli%in%c("article_revue","proceedings"),]
+
 # attributes
 properties <- as.tbl(read.csv('data/properties.csv',sep=";",stringsAsFactors = FALSE))
 
 axes = properties$nameshort[properties$type=='axe']
+teams = properties$nameshort[properties$type=='equipe']
+allyears = setdiff(unique(publis$year),c("2017"))
 
 ```
 
@@ -28,7 +34,7 @@ axes = properties$nameshort[properties$type=='axe']
 
 ### Publis hors axe
 ```{r} 
-100*length(which(publis$axe=='hors_axe'))/nrow(publis)`
+100*length(which(publis$axe=='hors_axe'))/nrow(publis)
 ```
 
 ### Distrib of interaxe collabs
@@ -57,7 +63,9 @@ Interéquipe dans le temps ?
 
 Publis with one author
 ```{r}
-hist(sapply(publis$auteurs,function(s){length(strsplit(s,',')[[1]])}),breaks=50,xlab="number of authors",main="")
+authornum = sapply(publis$auteurs,function(s){length(strsplit(s,',')[[1]])})
+length(which(authornum==1))/length(authornum)
+hist(authornum,breaks=50,xlab="number of authors",main="")
 ```
 
 Internal rate for each publi with more than one author :
@@ -88,37 +96,260 @@ hist(internrate(c("PARIS")),breaks=50)
 
 ## Export graph axes gexf
 
-```{r}
+Graph construction function
+```{r include = FALSE}
 library(rgexf)
-# id,label
-nodes = data.frame(id=axes,label=axes)
-e1=c();e2=c();for(n1 in nodes$id){for(n2 in nodes$id){e1=append(e1,n1);e2=append(e2,n2)}}
-edges=data.frame(e1,e2)
-# edges : id1,id2
-# weights -> by publi number ; or by author ? -> the first is the second but weighted
-counts=list();
-for(a1 in axes){for(a2 in axes){for(y in unique(publis$year)){counts[[paste0(a1,a2,y)]]=0}}}
-for(i in 1:nrow(publis)){
-  axes = publis$axe[i];year=publis
-  currentaxes = strsplit(axes,',')[[1]]
-  if(length(currentaxes)>1){
-    for(a1 in currentaxes){for(a2 in currentaxes){counts[[paste0(a1,a2,publis$year[i])]]=counts[[paste0(a1,a2,publis$year[i])]]+1}}
+library(igraph)
+
+exportGraph <- function(nodesid,linkcolumn,out,type=c("gexf","igraph-year","igraph")){
+  # id,label
+  nodes = data.frame(id=nodesid,label=nodesid)
+  edges=matrix(rep("",2*length(nodesid)^2),nrow =length(nodesid)^2);k=1
+  for(a1 in 1:length(nodesid)){show(a1)
+    for(a2 in 1:length(nodesid)){edges[k,1]=nodesid[a1];edges[k,2]=nodesid[a2];k=k+1}}
+  # edges : id1,id2
+  # weights -> by publi number ; or by author ? -> the first is the second but weighted
+  counts=list();
+  #for(a1 in nodesid){show(a1)
+  #  for(a2 in nodesid){for(y in unique(publis$year)){counts[[paste0(a1,a2,y)]]=0}}}
+  for(i in 1:nrow(publis)){
+    show(i)
+    raxes = as.character(publis[i,linkcolumn]);
+    currentaxes = strsplit(raxes,',')[[1]]
+    if(length(currentaxes)>1){
+      for(a1 in currentaxes){for(a2 in currentaxes){
+        key=paste0(a1,a2,publis$year[i])
+        if(!(key%in%names(counts))){counts[[key]]=0}
+        counts[[key]]=counts[[key]]+1
+        }}
+    }
+  }
+  
+  weights=c();years=c();j=1
+  alledges=data.frame()
+  for(y in unique(publis$year)){
+    show(y)
+    j=1;inds=c();currentweights=c()
+    for(a1 in nodesid){
+      show(a1)
+      for(a2 in nodesid){
+      #show(counts[[paste0(a1,a2,y)]])
+        key=paste0(a1,a2,y)
+      if(key%in%names(counts)){
+        inds=append(inds,j);currentweights = append(currentweights,counts[[paste0(a1,a2,y)]])
+        years=append(years,y)
+      }
+      j=j+1
+    }}
+    alledges=rbind(alledges,edges[inds,])
+    weights=append(weights,currentweights)
+    
+    if(type=="igraph-year"){
+      g = graph_from_data_frame(cbind(edges[inds,],currentweights),directed = FALSE)
+      save(g,file = paste0('res/graph_',y,'.RData'))
+    }
+    
+  }
+  
+  if(type=="gexf"){
+    write.gexf(nodes=nodes,
+               edges=alledges,
+               edgesWeight=weights,
+               edgeDynamic=data.frame(years,years+0.99),
+               output=out
+    )
   }
 }
 
-write.gexf(nodes=nodes,
-           edges=edges,
-           edgesWeight=weights,
-           edgeDynamic=data.frame(years,years+0.99),
-           output=''
-)
+```
+
+
+
+```{r}
+exportGraph(axes,8,'res/axes.gexf',type="gexf")
+
+```
+
+
+
+## co-autorship in time
+
+```{r}
+exportGraph(authors$id,3,'res/coauthor.gexf',type="gexf")
 ```
 
 
 
 
+## Evolution of modularity in time ?
+
+-> for co-authorship network
+
+Define modularity functions
+```{r include = FALSE}
+library(Matrix)
+
+overlappingmodularity <- function(probas,adjacency){#,linkfun=function(p1,p2){return(p1*p2)}){
+  show(paste0('Computing overlapping modularity : dim(probas)=',dim(probas)[1],' ',dim(probas)[2],' ; dim(adjacency)=',dim(adjacency)[1],' ',dim(adjacency)[2]))
+  m = sum(adjacency)
+  n=nrow(probas)
+  kout=rowSums(adjacency)
+  kin=colSums(adjacency)
+  res=0
+  for(c in 1:ncol(probas)){
+    if(sum(probas[,c])>0){
+      if(c%%100==0){show(c/ncol(probas))}
+      a1 = Diagonal(x=probas[,c])%*%adjacency%*%Diagonal(x=probas[,c])
+      a2 = sum(kout*probas[,c])*sum(kin*probas[,c])*((sum(probas[,c])/n)^2)/m
+      res = res + sum(a1) - a2
+      rm(a1);gc() # loose time to call gc at each step ?
+    }
+  }
+  return(res/m)
+}
+
+directedmodularity<-function(membership,adjacency){
+  # sum([A_ij - k_iout k_j in/m ]\delta (c_i,c_j))
+  # 
+  #deltac = sparseMatrix(1:nrow(adjacency),1:ncol(adjacency),x=0)
+  #inds=c()
+  #for(c in unique(membership)){inds = append(inds,which(membership==c))}
+  m=sum(adjacency)
+  kout=rowSums(adjacency);kin=colSums(adjacency)
+  res = 0;k=length(unique(membership))
+  for(c in unique(membership)){
+    #if(c%%100==0){show(c/k)}
+    inds=which(membership==c)
+    res = res + sum(adjacency[inds,inds]) - sum(kin[inds])*sum(kout[inds])/m 
+    gc()
+  }
+  return(res/m)
+}
+
+```
+
+Compute yearly co-authorship networks
+```{r include = FALSE}
+exportGraph(authors$id,3,'',type='igraph-year')
+```
+
+get classes proba matrix
+```{r include = FALSE}
+authorsProbas<-function(authorsid,colid,classesnames,years){
+  res = matrix(0,length(authorsid),length(classesnames))
+  rownames(res)<-authorsid;colnames(res)<-classesnames
+  currentpublis=publis[publis$year%in%years,]
+  for(i in 1:nrow(currentpublis)){
+    raxes = as.character(currentpublis[i,colid]);
+    currentaxes = strsplit(raxes,',')[[1]]
+    rauthors = as.character(currentpublis[i,3]);
+    currentauthors = strsplit(rauthors,',')[[1]]
+    for(currentauthor in currentauthors){
+    for(currentaxe in currentaxes){
+      if(currentauthor%in%authorsid&currentaxe%in%classesnames){
+        res[currentauthor,currentaxe]=res[currentauthor,currentaxe]+1
+      }
+    }} 
+  }
+  return(t(apply(res,1,function(r){r/sum(r)})))
+}
+```
 
 
+Modularity in time
+```{r include = TRUE}
+
+mods= c();years=c();types=c()
+for(year in allyears){
+  show(year)
+  # load graph
+  load(paste0('res/graph_',year,'.RData'))
+  adjacency = as.matrix(as_adjacency_matrix(g,type = "both"))
+  axesprobas = authorsProbas(V(g)$name,8,axes,c(year))
+  teamprobas = authorsProbas(V(g)$name,6,teams,c(year))
+  mods=append(mods,overlappingmodularity(axesprobas,adjacency))
+  mods=append(mods,overlappingmodularity(teamprobas,adjacency))
+  years=append(years,c(year,year));types=append(types,c("axes","equipes"))
+}
+```
+
+plot
+```{r include = TRUE}
+g=ggplot(data.frame(mod=mods,year=years,type=types),aes(x=year,y=mod,colour=type,group=type))
+g+geom_point()+geom_line()
+```
+
+
+## Clustering coefficients (easier to interpret than modularity)
+
+```{r include = TRUE}
+ccoefs= c();years=c();types=c();ccoefnames=c()
+for(year in allyears){
+  show(year)
+  # load graph
+  load(paste0('res/graph_',year,'.RData'))
+  adjacency = as.matrix(as_adjacency_matrix(g,type = "both"))
+  axesprobas = authorsProbas(V(g)$name,8,axes,c(year));teamprobas = authorsProbas(V(g)$name,6,teams,c(year))
+ interaxes = t(axesprobas)%*%adjacency%*%axesprobas
+ for(axe in axes){if(sum(interaxes[axe,])>0){rate=interaxes[axe,axe]/sum(interaxes[axe,]);
+ ccoefs=append(ccoefs,rate);types=append(types,"axes");years=append(years,year);ccoefnames=append(ccoefnames,paste0(axe,year))}}
+ interteams = t(teamprobas)%*%adjacency%*%teamprobas
+ for(team in teams){if(sum(interteams[team,])>0){rate=interteams[team,team]/sum(interteams[team,]);
+ ccoefs=append(ccoefs,rate);types=append(types,"equipes");years=append(years,year);ccoefnames=append(ccoefnames,paste0(team,year))}}
+}
+names(ccoefs)<-ccoefnames
+```
+
+```{r include = TRUE}
+g=ggplot(data.frame(ccoef=ccoefs,year=years,type=types),aes(x=year,y=ccoef,colour=type,group=type))
+g+geom_point()+geom_smooth()
+```
+
+
+## Distributions of author interdisciplinarities (team and axes)
+
+```{r include = TRUE}
+interdisc=c();years=c();types=c()
+for(year in allyears){
+  show(year)
+  load(paste0('res/graph_',year,'.RData'));n=length(V(g)$name)
+  axesprobas = authorsProbas(V(g)$name,8,axes,c(year));teamprobas = authorsProbas(V(g)$name,6,teams,c(year))
+  interdisc=append(interdisc,1-rowSums(axesprobas^2))
+  interdisc=append(interdisc,1-rowSums(teamprobas^2))
+  years=append(years,rep(year,2*n));types=append(types,c(rep("axes",n),rep("equipes",n)))
+}
+```
+
+```{r include = TRUE}
+g=ggplot(data.frame(interdisc=interdisc,year=as.character(years),type=types),aes(x=interdisc,colour=year))
+g+geom_density()+facet_wrap(~type)
+```
+
+
+
+Second order interdisc (collaborators)
+
+```{r include = TRUE}
+interdisc=c();years=c();types=c()
+for(year in allyears){
+  show(year)
+  # load graph
+  load(paste0('res/graph_',year,'.RData'))
+  adjacency = as.matrix(as_adjacency_matrix(g,type = "both"))
+  axesprobas = authorsProbas(V(g)$name,8,axes,c(year))
+  teamprobas = authorsProbas(V(g)$name,6,teams,c(year))
+  axesinter = adjacency%*%axesprobas;axesinter=t(apply(axesinter,1,function(r){r/sum(r)}))
+  teaminter = adjacency%*%teamprobas;teaminter=t(apply(teaminter,1,function(r){r/sum(r)}))
+  interdisc=append(interdisc,1-rowSums(axesinter^2))
+  interdisc=append(interdisc,1-rowSums(teaminter^2))
+  years=append(years,rep(year,nrow(axesinter)+nrow(teaminter)));types=append(types,c(rep("axes",nrow(axesinter)),rep("equipes",nrow(teaminter))))
+}
+```
+
+```{r include = TRUE}
+g=ggplot(data.frame(interdisc=interdisc,year=as.character(years),type=types),aes(x=interdisc,colour=year))
+g+geom_density()+facet_wrap(~type,scales = "free")
+```
 
 
 
