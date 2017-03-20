@@ -33,8 +33,15 @@ byteam = team_authorship%>%group_by(id_article)%>%
   summarise(paris=as.numeric(sum(as.numeric("P.A.R.I.S"%in%EQUIPE))>0),
             cria=as.numeric(sum(as.numeric("C.R.I.A"%in%EQUIPE))>0),
             ehgo=as.numeric(sum(as.numeric("E.H.GO"%in%EQUIPE))>0),
-            nbauthors = n()
+            internonly=as.numeric(prod(as.numeric(AuteurDesamb%in%authors$NOM))==1),
+            nbauthorsintern = sum(as.numeric(AuteurDesamb%in%authors$NOM)),
+            nbauthors = n(),
+            nbequipes = length(unique(EQUIPE))
             )
+
+# PB : remove NAs !
+
+# count by teams
 sum(byteam$paris)
 sum(byteam$cria)
 sum(byteam$ehgo)
@@ -49,8 +56,41 @@ length(which(byteam$nbauthors==1&byteam$ehgo>0))/sum(byteam$ehgo)
 
 
 
-# intern/extern
-authorship$AuteurDesamb%in%authors$NOM
+# intern - extern
+#authorship$AuteurDesamb%in%authors$NOM
+length(which(byteam$internonly!=1))/length(which(byteam$nbauthors>1))
+length(which(byteam$internonly!=1&byteam$paris>0))/length(which(byteam$nbauthors>1&byteam$paris>0))
+length(which(byteam$internonly!=1&byteam$cria>0))/length(which(byteam$nbauthors>1&byteam$cria>0))
+length(which(byteam$internonly!=1&byteam$ehgo>0))/length(which(byteam$nbauthors>1&byteam$ehgo>0))
+
+
+# rate intern / nbauthors
+
+rateall = byteam$nbauthorsintern[byteam$nbauthors>1]/byteam$nbauthors[byteam$nbauthors>1]
+mean(rateall)
+sd(rateall)
+
+rateparis = byteam$nbauthorsintern[byteam$nbauthors>1&byteam$paris>0]/byteam$nbauthors[byteam$nbauthors>1&byteam$paris>0]
+mean(rateparis)
+sd(rateparis)
+
+ratecria = byteam$nbauthorsintern[byteam$nbauthors>1&byteam$cria>0]/byteam$nbauthors[byteam$nbauthors>1&byteam$cria>0]
+mean(ratecria)
+sd(ratecria)
+
+ratehgo = byteam$nbauthorsintern[byteam$nbauthors>1&byteam$ehgo>0]/byteam$nbauthors[byteam$nbauthors>1&byteam$ehgo>0]
+mean(ratehgo)
+sd(ratehgo)
+
+
+####
+
+# prop interequipes
+length(which(byteam$nbequipes>1&byteam$nbauthors>1))/length(which(byteam$nbauthors>1))
+
+
+
+
 
 
 
