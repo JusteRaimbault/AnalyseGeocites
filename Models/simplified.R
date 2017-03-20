@@ -36,10 +36,13 @@ byteam = team_authorship%>%group_by(id_article)%>%
             internonly=as.numeric(prod(as.numeric(AuteurDesamb%in%authors$NOM))==1),
             nbauthorsintern = sum(as.numeric(AuteurDesamb%in%authors$NOM)),
             nbauthors = n(),
-            nbequipes = length(unique(EQUIPE))
+            nbequipes = length(unique(EQUIPE[!is.na(EQUIPE)])) # ! remove NAs !
             )
 
-# PB : remove NAs !
+# add nb axes
+nbaxes = sapply(publis$axe, function(s){length(strsplit(s,split=',')[[1]])})
+publis$nbaxes=nbaxes
+byteam=left_join(byteam,publis[,c(1,9)],by=c('id_article'='id'))
 
 # count by teams
 sum(byteam$paris)
@@ -87,10 +90,13 @@ sd(ratehgo)
 
 # prop interequipes
 length(which(byteam$nbequipes>1&byteam$nbauthors>1))/length(which(byteam$nbauthors>1))
+#byteam[byteam$nbequipes==3,]
+#data.frame(publis[publis$id==7216,])
 
+length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$paris>0))/length(which(byteam$nbauthors>1&byteam$paris>0))
+length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$cria>0))/length(which(byteam$nbauthors>1&byteam$cria>0))
+length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$ehgo>0))/length(which(byteam$nbauthors>1&byteam$ehgo>0))
 
-
-
-
+# prop interaxes
 
 
