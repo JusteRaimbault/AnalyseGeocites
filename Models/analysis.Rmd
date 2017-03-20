@@ -12,7 +12,7 @@ setwd(paste0(Sys.getenv('CS_HOME'),'/Misc/AnalyseGeocites/Models'))
 
 
 # authors
-authors <- as.tbl(read.csv('data/authors.csv',sep=";",stringsAsFactors = FALSE))
+authors <- as.tbl(read.csv('data/authors_old.csv',sep=";",stringsAsFactors = FALSE))
 
 # publis
 publis <- as.tbl(read.csv('data/publications.csv',sep=";",stringsAsFactors = FALSE))
