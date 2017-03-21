@@ -27,7 +27,8 @@ publis = publis[publis$typepubli%in%publitypes,]
 nrow(publis)
 
 team_authorship = left_join(authorship,authors,by=c('AuteurDesamb'='NOM'))
-team_authorship = team_authorship[team_authorship$id_article%in%publis$id,]
+team_authorship$EQUIPE[is.na(team_authorship$EQUIPE)]="EXT"
+team_authorship = team_authorship[team_authorship$id_article%in%publis$id&team_authorship$EQUIPE!=""&team_authorship$id_article!=6522,] # 6522 : side effect of removing desjardins ; only one with one ext left alone.
 # multi team ?
 #duplicated(team_authorship[,1:2])
 byteam = team_authorship%>%group_by(id_article)%>%
@@ -37,7 +38,8 @@ byteam = team_authorship%>%group_by(id_article)%>%
             internonly=as.numeric(prod(as.numeric(AuteurDesamb%in%authors$NOM))==1),
             nbauthorsintern = sum(as.numeric(AuteurDesamb%in%authors$NOM)),
             nbauthors = n(),
-            nbequipes = length(unique(EQUIPE[!is.na(EQUIPE)])) # ! remove NAs !
+            nbequipes = length(unique(EQUIPE[EQUIPE!="EXT"])), # ! remove NAs !
+            withDoctorant = as.numeric(1%in%STATUT)
             )
 
 # add nb axes
@@ -45,7 +47,9 @@ nbaxes = sapply(publis$axe, function(s){length(strsplit(s,split=',')[[1]])})
 publis$nbaxes=nbaxes
 byteam=left_join(byteam,publis[,c(1,4,9)],by=c('id_article'='id'))
 
+
 # count by teams
+nrow(byteam)
 sum(byteam$paris)
 sum(byteam$cria)
 sum(byteam$ehgo)
@@ -140,6 +144,27 @@ ggplot(data.frame(publiinternrate=rates,year=cyears,type=types),aes(x=year,y=pub
 
 
 ####
+# proportion avec doctorants
+
+length(which(byteam$withDoctorant==1))/nrow(byteam)
+length(which(byteam$withDoctorant==1&byteam$paris>0))/sum(byteam$paris)
+length(which(byteam$withDoctorant==1&byteam$cria>0))/sum(byteam$cria)
+length(which(byteam$withDoctorant==1&byteam$ehgo>0))/sum(byteam$ehgo)
+
+counts = c();cyears=c();types=c()
+for(year in years){
+  counts=append(counts,length(which(byteam$withDoctorant==1&byteam$year==year))/length(which(byteam$year==year)));types=append(types,'all');cyears=append(cyears,year)
+  counts=append(counts,length(which(byteam$withDoctorant==1&byteam$paris>0&byteam$year==year))/sum(byteam$paris[byteam$year==year]));types=append(types,'paris');cyears=append(cyears,year)
+  counts=append(counts,length(which(byteam$withDoctorant==1&byteam$cria>0&byteam$year==year))/sum(byteam$cria[byteam$year==year]));types=append(types,'cria');cyears=append(cyears,year)
+  counts=append(counts,length(which(byteam$withDoctorant==1&byteam$ehgo>0&byteam$year==year))/sum(byteam$ehgo[byteam$year==year]));types=append(types,'ehgo');cyears=append(cyears,year)
+}
+ggplot(data.frame(withdoctorantrate=counts,year=cyears,type=types),aes(x=year,y=withdoctorantrate,col=type,group=type))+geom_point()+geom_line()+ylab("Taux publis avec doctorant")
+
+
+
+
+
+####
 
 # prop interequipes
 length(which(byteam$nbequipes>1&byteam$nbauthors>1))/length(which(byteam$nbauthors>1))
@@ -149,6 +174,19 @@ length(which(byteam$nbequipes>1&byteam$nbauthors>1))/length(which(byteam$nbautho
 length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$paris>0))/length(which(byteam$nbauthors>1&byteam$paris>0))
 length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$cria>0))/length(which(byteam$nbauthors>1&byteam$cria>0))
 length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$ehgo>0))/length(which(byteam$nbauthors>1&byteam$ehgo>0))
+
+# paris \inter cria length(which(byteam$nbauthors>1&byteam$paris>0&byteam$cria>0))
+# paris \inter ehgo length(which(byteam$nbauthors>1&byteam$paris>0&byteam$ehgo>0))
+# cria \inter ehgo length(which(byteam$nbauthors>1&byteam$cria>0&byteam$ehgo>0))
+#length(which(byteam$nbequipes==1&byteam$nbauthors>1&byteam$paris>0))+
+#  length(which(byteam$nbequipes==1&byteam$nbauthors>1&byteam$cria>0))+
+#  length(which(byteam$nbequipes==1&byteam$nbauthors>1&byteam$ehgo>0))+
+#  length(which(byteam$nbauthors>1&byteam$paris>0&byteam$cria>0))+
+#  length(which(byteam$nbauthors>1&byteam$paris>0&byteam$ehgo>0))+
+#  length(which(byteam$nbauthors>1&byteam$cria>0&byteam$ehgo>0))
+#length(which(byteam$nbequipes==2&byteam$nbauthors>1&byteam$paris>0))
+#length(which(byteam$nbauthors>1&byteam$paris>0))
+#which(byteam$paris+byteam$cria+byteam$ehgo==0)
 
 
 counts = c();cyears=c();types=c()
