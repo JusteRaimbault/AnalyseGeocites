@@ -7,8 +7,9 @@
 library(dplyr)
 library(ggplot2)
 
-setwd(paste0(Sys.getenv('CS_HOME'),'/Misc/AnalyseGeocites/Models'))
 
+setwd(paste0(Sys.getenv('CS_HOME'),'/Misc/AnalyseGeocites/Models'))
+resdir = paste0(Sys.getenv('CS_HOME'),'/Misc/AnalyseGeocites/Results/measures/')
 
 # authors
 authors <- as.tbl(read.csv('data/authors_desamb.csv',sep=";",stringsAsFactors = FALSE))
@@ -65,15 +66,15 @@ for(year in years){
   counts=append(counts,length(which(byteam$year==year&byteam$ehgo>0)));types=append(types,'ehgo');cyears=append(cyears,year)
 }
 ggplot(data.frame(publis=counts,year=cyears,type=types),aes(x=year,y=publis,col=type,group=type))+geom_point()+geom_line()
-
+ggsave(filename = paste0(resdir,'publi_count.pdf'),width=15,height=10,units = 'cm')
 
 
 # number of authors
 #team_authorship %>% group_by(id_article)%>%summarise(nbauthors = n())
-length(which(byteam$nbauthors==1))/nrow(byteam)
-length(which(byteam$nbauthors==1&byteam$paris>0))/sum(byteam$paris)
-length(which(byteam$nbauthors==1&byteam$cria>0))/sum(byteam$cria)
-length(which(byteam$nbauthors==1&byteam$ehgo>0))/sum(byteam$ehgo)
+100*length(which(byteam$nbauthors==1))/nrow(byteam)
+100*length(which(byteam$nbauthors==1&byteam$paris>0))/sum(byteam$paris)
+100*length(which(byteam$nbauthors==1&byteam$cria>0))/sum(byteam$cria)
+100*length(which(byteam$nbauthors==1&byteam$ehgo>0))/sum(byteam$ehgo)
 
 # same by year
 counts = c();cyears=c();types=c()
@@ -84,16 +85,17 @@ for(year in years){
   counts=append(counts,length(which(byteam$nbauthors==1&byteam$ehgo>0&byteam$year==year))/sum(byteam$ehgo[byteam$year==year]));types=append(types,'ehgo');cyears=append(cyears,year)
 }
 ggplot(data.frame(singleauthorrate=counts,year=cyears,type=types),aes(x=year,y=singleauthorrate,col=type,group=type))+geom_point()+geom_line()
+ggsave(filename = paste0(resdir,'single_author_rate.pdf'),width=15,height=10,units = 'cm')
 
 
 
 
 # intern - extern
 #authorship$AuteurDesamb%in%authors$NOM
-length(which(byteam$internonly!=1))/length(which(byteam$nbauthors>1))
-length(which(byteam$internonly!=1&byteam$paris>0))/length(which(byteam$nbauthors>1&byteam$paris>0))
-length(which(byteam$internonly!=1&byteam$cria>0))/length(which(byteam$nbauthors>1&byteam$cria>0))
-length(which(byteam$internonly!=1&byteam$ehgo>0))/length(which(byteam$nbauthors>1&byteam$ehgo>0))
+100*length(which(byteam$internonly!=1))/length(which(byteam$nbauthors>1))
+100*length(which(byteam$internonly!=1&byteam$paris>0))/length(which(byteam$nbauthors>1&byteam$paris>0))
+100*length(which(byteam$internonly!=1&byteam$cria>0))/length(which(byteam$nbauthors>1&byteam$cria>0))
+100*length(which(byteam$internonly!=1&byteam$ehgo>0))/length(which(byteam$nbauthors>1&byteam$ehgo>0))
 
 
 counts = c();cyears=c();types=c()
@@ -108,6 +110,7 @@ for(year in years){
 }
 ggplot(data.frame(externalrate=counts,year=cyears,type=types),aes(x=year,y=externalrate,col=type,group=type))+geom_point()+geom_line()
 # NOTE : for ehgo in 2013, 3 publis only with nbauthors > 1
+ggsave(filename = paste0(resdir,'external_rate.pdf'),width=15,height=10,units = 'cm')
 
 
 # rate intern / nbauthors
@@ -142,28 +145,29 @@ for(year in years){
   rates=append(rates,byteam$nbauthorsintern[ehgorows]/byteam$nbauthors[ehgorows]);types=append(types,rep('ehgo',length(which(ehgorows))));cyears=append(cyears,rep(year,length(which(ehgorows))))
 }
 ggplot(data.frame(publiinternrate=rates,year=cyears,type=types),aes(x=year,y=publiinternrate,color=type))+geom_point(size=0.5)+stat_smooth()+ylab("Publication internal rate")
+ggsave(filename = paste0(resdir,'publiinternrate.pdf'),width=15,height=10,units = 'cm')
 
 
 
 ####
 # proportion avec doctorants
 
-length(which(byteam$withDoctorant==1))/nrow(byteam)
-length(which(byteam$withDoctorant==1&byteam$paris>0))/sum(byteam$paris)
-length(which(byteam$withDoctorant==1&byteam$cria>0))/sum(byteam$cria)
-length(which(byteam$withDoctorant==1&byteam$ehgo>0))/sum(byteam$ehgo)
+100*length(which(byteam$withDoctorant==1))/nrow(byteam)
+100*length(which(byteam$withDoctorant==1&byteam$paris>0))/sum(byteam$paris)
+100*length(which(byteam$withDoctorant==1&byteam$cria>0))/sum(byteam$cria)
+100*length(which(byteam$withDoctorant==1&byteam$ehgo>0))/sum(byteam$ehgo)
 
 # doctorants seuls - un auteur
-length(which(byteam$withDoctorant==1&byteam$nbauthors==1))/nrow(byteam)
-length(which(byteam$withDoctorant==1&byteam$paris>0&byteam$nbauthors==1))/sum(byteam$paris)
-length(which(byteam$withDoctorant==1&byteam$cria>0&byteam$nbauthors==1))/sum(byteam$cria)
-length(which(byteam$withDoctorant==1&byteam$ehgo>0&byteam$nbauthors==1))/sum(byteam$ehgo)
+100*length(which(byteam$withDoctorant==1&byteam$nbauthors==1))/nrow(byteam)
+100*length(which(byteam$withDoctorant==1&byteam$paris>0&byteam$nbauthors==1))/sum(byteam$paris)
+100*length(which(byteam$withDoctorant==1&byteam$cria>0&byteam$nbauthors==1))/sum(byteam$cria)
+100*length(which(byteam$withDoctorant==1&byteam$ehgo>0&byteam$nbauthors==1))/sum(byteam$ehgo)
 
 # only doctorants - any authors
-length(which(byteam$onlyDoctorants))/nrow(byteam)
-length(which(byteam$onlyDoctorants&byteam$paris>0))/sum(byteam$paris)
-length(which(byteam$onlyDoctorants&byteam$cria>0))/sum(byteam$cria)
-length(which(byteam$onlyDoctorants&byteam$ehgo>0))/sum(byteam$ehgo)
+100*length(which(byteam$onlyDoctorants))/nrow(byteam)
+100*length(which(byteam$onlyDoctorants&byteam$paris>0))/sum(byteam$paris)
+100*length(which(byteam$onlyDoctorants&byteam$cria>0))/sum(byteam$cria)
+100*length(which(byteam$onlyDoctorants&byteam$ehgo>0))/sum(byteam$ehgo)
 
 
 
@@ -175,6 +179,8 @@ for(year in years){
   counts=append(counts,length(which(byteam$withDoctorant==1&byteam$ehgo>0&byteam$year==year))/sum(byteam$ehgo[byteam$year==year]));types=append(types,'ehgo');cyears=append(cyears,year)
 }
 ggplot(data.frame(withdoctorantrate=counts,year=cyears,type=types),aes(x=year,y=withdoctorantrate,col=type,group=type))+geom_point()+geom_line()+ylab("Taux publis avec doctorant")
+ggsave(filename = paste0(resdir,'taux_doctorant.pdf'),width=15,height=10,units = 'cm')
+
 
 # effectif de doctorants par equipes
 length(which(authors$STATUT==1))
@@ -192,13 +198,13 @@ length(which(authors$STATUT==1&authors$EQUIPE=="E.H.GO"))/length(which(authors$M
 ####
 
 # prop interequipes
-length(which(byteam$nbequipes>1&byteam$nbauthors>1))/length(which(byteam$nbauthors>1))
+100*length(which(byteam$nbequipes>1&byteam$nbauthors>1))/length(which(byteam$nbauthors>1))
 #byteam[byteam$nbequipes==3,]
 #data.frame(publis[publis$id==7216,])
 
-length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$paris>0))/length(which(byteam$nbauthors>1&byteam$paris>0))
-length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$cria>0))/length(which(byteam$nbauthors>1&byteam$cria>0))
-length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$ehgo>0))/length(which(byteam$nbauthors>1&byteam$ehgo>0))
+100*length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$paris>0))/length(which(byteam$nbauthors>1&byteam$paris>0))
+100*length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$cria>0))/length(which(byteam$nbauthors>1&byteam$cria>0))
+100*length(which(byteam$nbequipes>1&byteam$nbauthors>1&byteam$ehgo>0))/length(which(byteam$nbauthors>1&byteam$ehgo>0))
 
 # paris \inter cria length(which(byteam$nbauthors>1&byteam$paris>0&byteam$cria>0))
 # paris \inter ehgo length(which(byteam$nbauthors>1&byteam$paris>0&byteam$ehgo>0))
@@ -225,16 +231,17 @@ for(year in years){
 );types=append(types,'ehgo');cyears=append(cyears,year)
 }
 ggplot(data.frame(interteam=counts,year=cyears,type=types),aes(x=year,y=interteam,col=type,group=type))+geom_point()+geom_line()+ylab("Taux publis interéquipes")
+ggsave(filename = paste0(resdir,'tauxpublisinterequipe.pdf'),width=15,height=10,units = 'cm')
 
 
 
 
 # prop interaxes
-length(which(byteam$nbaxes>1&byteam$nbauthors>1))/length(which(byteam$nbauthors>1))
+100*length(which(byteam$nbaxes>1&byteam$nbauthors>1))/length(which(byteam$nbauthors>1))
 
-length(which(byteam$nbaxes>1&byteam$nbauthors>1&byteam$paris>0))/length(which(byteam$nbauthors>1&byteam$paris>0))
-length(which(byteam$nbaxes>1&byteam$nbauthors>1&byteam$cria>0))/length(which(byteam$nbauthors>1&byteam$cria>0))
-length(which(byteam$nbaxes>1&byteam$nbauthors>1&byteam$ehgo>0))/length(which(byteam$nbauthors>1&byteam$ehgo>0))
+100*length(which(byteam$nbaxes>1&byteam$nbauthors>1&byteam$paris>0))/length(which(byteam$nbauthors>1&byteam$paris>0))
+100*length(which(byteam$nbaxes>1&byteam$nbauthors>1&byteam$cria>0))/length(which(byteam$nbauthors>1&byteam$cria>0))
+100*length(which(byteam$nbaxes>1&byteam$nbauthors>1&byteam$ehgo>0))/length(which(byteam$nbauthors>1&byteam$ehgo>0))
 
 counts = c();cyears=c();types=c()
 for(year in years){
@@ -247,6 +254,68 @@ for(year in years){
   );types=append(types,'ehgo');cyears=append(cyears,year)
 }
 ggplot(data.frame(interaxe=counts,year=cyears,type=types),aes(x=year,y=interaxe,col=type,group=type))+geom_point()+geom_line()+ylab("Taux publis interaxes")
+ggsave(filename = paste0(resdir,'tauxpublisinteraxes.pdf'),width=15,height=10,units = 'cm')
+
+
+
+
+########
+### Interaxes collaboration matrix
+
+axes = unique(unlist(sapply(publis$axe[publis$id%in%byteam$id_article],function(s){strsplit(s,',')[[1]]})))
+collabmatrix = matrix(0,length(axes),length(axes));rownames(collabmatrix)=axes;colnames(collabmatrix)=axes
+
+for(axestr in publis$axe[publis$id%in%byteam$id_article]){
+  if(nchar(axestr)>0){
+    currentaxes = strsplit(axestr,',')[[1]];
+    if(length(currentaxes)==1){collabmatrix[currentaxes[1],currentaxes[1]]=collabmatrix[currentaxes[1],currentaxes[1]]+1}
+    else{for(i1 in 1:length(currentaxes)){for(i2 in 1:length(currentaxes)){collabmatrix[currentaxes[i1],currentaxes[i2]]=collabmatrix[currentaxes[i1],currentaxes[i2]]+1}}}
+  }
+}
+
+write.table(collabmatrix,file = paste0(resdir,'axescollab.csv'),quote = FALSE,sep = ',',row.names = T,col.names = T)
+
+
+###
+## Modularities
+
+allyears=2012:2016
+
+names = authors$NOM
+teamprobas = as.matrix(data.frame(paris = as.numeric(authors$EQUIPE=="P.A.R.I.S"),
+                        cria = as.numeric(authors$EQUIPE=="C.R.I.A"),
+                        ehgo=as.numeric(authors$EQUIPE=="E.H.GO")))
+rownames(teamprobas)<-names
+
+nrepet=50
+
+mods= c();years=c();types=c()
+rdmods=c();rdsdmods=c()
+for(year in allyears){
+  show(year)
+  adjacency =coAuthorshipAdj(year)
+  axesprobas = authorAxesProbas(year)#authorsProbas(V(g)$name,8,axes,c(year))
+  #teamprobas = #authorsProbas(V(g)$name,6,teams,c(year))
+  axeadj=adjacency[rownames(axesprobas),rownames(axesprobas)]
+  mods=append(mods,overlappingmodularity(axesprobas,axeadj))
+  mods=append(mods,overlappingmodularity(teamprobas,adjacency))
+  years=append(years,c(year,year));types=append(types,c("axes","equipes"))
+  # randomized networks
+  ramod=c();rtmod=c()
+  for(i in 1:nrepet){
+    ramod=append(ramod,overlappingmodularity(axesprobas,axeadj[sample.int(nrow(axeadj)),sample.int(ncol(axeadj))]))
+    rtmod=append(rtmod,overlappingmodularity(teamprobas,adjacency[sample.int(nrow(adjacency)),sample.int(ncol(adjacency))]))
+  }
+  rdmods=append(rdmods,mean(ramod));rdmods=append(rdmods,mean(rtmod))
+  rdsdmods=append(rdsdmods,sd(ramod));rdsdmods=append(rdsdmods,sd(rtmod))
+}
+
+g=ggplot(data.frame(mod=mods,year=years,type=types,rdmod=rdmods,sdrdmod=rdsdmods))
+g+geom_point(aes(x=year,y=mod,colour=type))+geom_line(aes(x=year,y=mod,colour=type,group=type))+
+  geom_point(aes(x=year,y=rdmod,colour=type))+geom_line(aes(x=year,y=rdmod,colour=type,group=type),linetype=2)+
+  geom_errorbar(aes(x=year,y=rdmod,ymin=rdmod-sdrdmod,ymax=rdmod+sdrdmod,colour=type))
+  
+
 
 
 
