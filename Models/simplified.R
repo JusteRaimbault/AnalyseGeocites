@@ -18,7 +18,7 @@ publis <- as.tbl(read.csv('data/publications.csv',sep=";",stringsAsFactors = FAL
 authorship <- as.tbl(read.csv('data/authorship.csv',sep=";",stringsAsFactors = FALSE))
 authorship = authorship[sapply(authorship$AuteurDesamb,nchar)>0,]
 
-publitypes = c("article_revue","article","ouvrage","chapitre","proceedings","actes_congres_national")
+publitypes = c("article_revue","article","ouvrage","chapitre","proceedings","actes_congres_national","dir_ouvrage")
 years = 2012:2016
 
 publis = publis[publis$typepubli%in%publitypes,]
@@ -28,6 +28,7 @@ nrow(publis)
 
 team_authorship = left_join(authorship,authors,by=c('AuteurDesamb'='NOM'))
 team_authorship$EQUIPE[is.na(team_authorship$EQUIPE)]="EXT"
+team_authorship$STATUT[is.na(team_authorship$STATUT)]=666
 team_authorship = team_authorship[team_authorship$id_article%in%publis$id&team_authorship$EQUIPE!=""&team_authorship$id_article!=6522,] # 6522 : side effect of removing desjardins ; only one with one ext left alone.
 # multi team ?
 #duplicated(team_authorship[,1:2])
@@ -39,7 +40,8 @@ byteam = team_authorship%>%group_by(id_article)%>%
             nbauthorsintern = sum(as.numeric(AuteurDesamb%in%authors$NOM)),
             nbauthors = n(),
             nbequipes = length(unique(EQUIPE[EQUIPE!="EXT"])), # ! remove NAs !
-            withDoctorant = as.numeric(1%in%STATUT)
+            withDoctorant = as.numeric(1%in%STATUT),
+            onlyDoctorants = prod(STATUT)==1
             )
 
 # add nb axes
@@ -151,11 +153,18 @@ length(which(byteam$withDoctorant==1&byteam$paris>0))/sum(byteam$paris)
 length(which(byteam$withDoctorant==1&byteam$cria>0))/sum(byteam$cria)
 length(which(byteam$withDoctorant==1&byteam$ehgo>0))/sum(byteam$ehgo)
 
-# doctorants seuls
+# doctorants seuls - un auteur
 length(which(byteam$withDoctorant==1&byteam$nbauthors==1))/nrow(byteam)
 length(which(byteam$withDoctorant==1&byteam$paris>0&byteam$nbauthors==1))/sum(byteam$paris)
 length(which(byteam$withDoctorant==1&byteam$cria>0&byteam$nbauthors==1))/sum(byteam$cria)
 length(which(byteam$withDoctorant==1&byteam$ehgo>0&byteam$nbauthors==1))/sum(byteam$ehgo)
+
+# only doctorants - any authors
+length(which(byteam$onlyDoctorants))/nrow(byteam)
+length(which(byteam$onlyDoctorants&byteam$paris>0))/sum(byteam$paris)
+length(which(byteam$onlyDoctorants&byteam$cria>0))/sum(byteam$cria)
+length(which(byteam$onlyDoctorants&byteam$ehgo>0))/sum(byteam$ehgo)
+
 
 
 counts= c();cyears=c();types=c()
