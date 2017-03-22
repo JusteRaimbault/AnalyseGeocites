@@ -313,7 +313,8 @@ for(year in allyears){
 g=ggplot(data.frame(mod=mods,year=years,type=types,rdmod=rdmods,sdrdmod=rdsdmods))
 g+geom_point(aes(x=year,y=mod,colour=type))+geom_line(aes(x=year,y=mod,colour=type,group=type))+
   geom_point(aes(x=year,y=rdmod,colour=type))+geom_line(aes(x=year,y=rdmod,colour=type,group=type),linetype=2)+
-  geom_errorbar(aes(x=year,y=rdmod,ymin=rdmod-sdrdmod,ymax=rdmod+sdrdmod,colour=type))
+  geom_errorbar(aes(x=year,y=rdmod,ymin=rdmod-sdrdmod,ymax=rdmod+sdrdmod,colour=type),width=0.15)+
+  ylab("Multiclass modularity")
   
 
 
