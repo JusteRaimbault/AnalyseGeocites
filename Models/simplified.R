@@ -151,7 +151,14 @@ length(which(byteam$withDoctorant==1&byteam$paris>0))/sum(byteam$paris)
 length(which(byteam$withDoctorant==1&byteam$cria>0))/sum(byteam$cria)
 length(which(byteam$withDoctorant==1&byteam$ehgo>0))/sum(byteam$ehgo)
 
-counts = c();cyears=c();types=c()
+# doctorants seuls
+length(which(byteam$withDoctorant==1&byteam$nbauthors==1))/nrow(byteam)
+length(which(byteam$withDoctorant==1&byteam$paris>0&byteam$nbauthors==1))/sum(byteam$paris)
+length(which(byteam$withDoctorant==1&byteam$cria>0&byteam$nbauthors==1))/sum(byteam$cria)
+length(which(byteam$withDoctorant==1&byteam$ehgo>0&byteam$nbauthors==1))/sum(byteam$ehgo)
+
+
+counts= c();cyears=c();types=c()
 for(year in years){
   counts=append(counts,length(which(byteam$withDoctorant==1&byteam$year==year))/length(which(byteam$year==year)));types=append(types,'all');cyears=append(cyears,year)
   counts=append(counts,length(which(byteam$withDoctorant==1&byteam$paris>0&byteam$year==year))/sum(byteam$paris[byteam$year==year]));types=append(types,'paris');cyears=append(cyears,year)
@@ -160,7 +167,16 @@ for(year in years){
 }
 ggplot(data.frame(withdoctorantrate=counts,year=cyears,type=types),aes(x=year,y=withdoctorantrate,col=type,group=type))+geom_point()+geom_line()+ylab("Taux publis avec doctorant")
 
+# effectif de doctorants par equipes
+length(which(authors$STATUT==1))
+length(which(authors$STATUT==1))/length(which(authors$MEMBRE==1))
 
+length(which(authors$STATUT==1&authors$EQUIPE=="P.A.R.I.S"))
+length(which(authors$STATUT==1&authors$EQUIPE=="P.A.R.I.S"))/length(which(authors$MEMBRE==1&authors$EQUIPE=="P.A.R.I.S"))
+length(which(authors$STATUT==1&authors$EQUIPE=="C.R.I.A"))
+length(which(authors$STATUT==1&authors$EQUIPE=="C.R.I.A"))/length(which(authors$MEMBRE==1&authors$EQUIPE=="C.R.I.A"))
+length(which(authors$STATUT==1&authors$EQUIPE=="E.H.GO"))
+length(which(authors$STATUT==1&authors$EQUIPE=="E.H.GO"))/length(which(authors$MEMBRE==1&authors$EQUIPE=="E.H.GO"))
 
 
 
