@@ -19,6 +19,7 @@ publis <- as.tbl(read.csv('data/publications.csv',sep=";",stringsAsFactors = FAL
 authorship <- as.tbl(read.csv('data/authorship.csv',sep=";",stringsAsFactors = FALSE))
 authorship = authorship[sapply(authorship$AuteurDesamb,nchar)>0,]
 
+# pour les revues à comité de lecture, des ouvrages et chapitres d'ouvrages, des actes de conférences à comité de lecture
 publitypes = c("article_revue","article","ouvrage","chapitre","proceedings","actes_congres_national","dir_ouvrage")
 years = 2012:2016
 
@@ -152,6 +153,7 @@ ggsave(filename = paste0(resdir,'publiinternrate.pdf'),width=15,height=10,units 
 ####
 # proportion avec doctorants
 
+#100*length(which(team_authorship$STATUT==1))/nrow(team_authorship)
 100*length(which(byteam$withDoctorant==1))/nrow(byteam)
 100*length(which(byteam$withDoctorant==1&byteam$paris>0))/sum(byteam$paris)
 100*length(which(byteam$withDoctorant==1&byteam$cria>0))/sum(byteam$cria)
