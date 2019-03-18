@@ -1,0 +1,67 @@
+ ZRINSCAKG             ZANINC                ZAMORANOG             WORONIECKIM          
+  [5] WOLFFD                WASTABLEM             VOLVEYA               VERDIERN             
+  [9] VACCHIANI-MARCUZZOC   TROUILLARDE           TISSIERJ-L            TILLOUSM             
+ [13] TESSIERF              SPYRELLISS            SOLM-P                SEKULOVSKIG          
+ [17] SEGURETS              SCHMOLLC              SCHMITTC              SANTAMARIAF          
+ [21] SANDERSL              SAINTEVILLEM          SAINT-JULIENT         SAADAA               
+ [25] RUFATS                ROSEMBERGM            ROLLETJ-M             ROBICM-C             
+ [29] RIVIÈRED              RHEINC                REYNAUDL              REYS                 
+ [33] PUMAIND               PRÉVÉLAKISG           POUSINF               POTHITAKII-V         
+ [37] PLANQUEG              PISTREP               PETSIMERISP           PETITS               
+ [41] PERROT-NANIA-S        PALSKYG               ORAINO                NEYROUDM             
+ [45] MURATJ                MORBOISE              MENDIBILD             MATHIEU-HUBERD       
+ [49] MATHIANH              MARROUCHIS            MARDIROSSIANF         MANCEAUE             
+ [53] LOUAILT               LIZZIL                LESECQG               LETEXIERM            
+ [57] LENEINDREC            LENECHETF             LEGOIXR               LAU-BIGNONA          
+ [61] LAPORTEA              LAMBOURDIEREE         LABORDEM              LABINALG             
+ [65] KOSMOPOULOSC          KAZARIANN             HUMAIN-LAMOUREA       HALLAIRG             
+ [69] GUERREROD             GUÉROISM              GUERIN-PACEF          GRATALOUPC           
+ [73] GRASLANDC             GOUYOU-BEAUCHAMPSM    GOSMEC                GODILLONS            
+ [77] GILLOTG               GÉNEAUdeLAMARLIÈREI   GAZULLL               FRETIGNYJ-B          
+ [81] FRANÇOISJ-C           FOLS                  FLEURYA               FIEGEL               
+ [85] FERRETTIF             FEN-CHONGJ            FAVAROJ-M             FABREE               
+ [89] ESTEBANEZJ            DURAND-DASTESF        DUPUYG                DUCRUETC             
+ [93] DUCOME                DUBUCS                DUBOISA               DOUAYN               
+ [97] DOBRUSZKESF           DJAMENTG              DEVRIENDTA            DESJARDINSX          
+[101] DEPRESTF              DELAGEM               DELPUPH               DEGOUTV              
+[105] DEBARRES              CUYALAS               CRULLIT               COURONNE-GEARYL-M    
+[109] COMMENGESH            COMINM-N              COLLIGNONB            COLDEFYM             
+[113] CLERVALA              CLERCP                CHEVALIERJ-P          CHARPENTIERA         
+[117] CHAMPIGNYJ            CATTANN               CAPDEPUYV             CALLEND              
+[121] CALENGEP              BUXEDAC               BUHNIKS               BUARDE               
+[125] BRETAGNOLLEA          BOULOCC               BOULIERJ              BOUINOTJ             
+[129] BORDINP               BOMATIE               BOICHOTC              BLANCHARDE           
+[133] BLAISH                BEYERA                BESSEJ-M              BERROIRS             
+[137] BENREBAHM             BEAUGUITTEL           BEAUCIREF             BAYINDIRGOULARASG    
+[141] BAUDET-MICHELS        BARONM                BANOSA                BAHOKENF             
+[145] ANDREE                ALBECKERM-F           AMARAM                ANDRIEUXF            
+[149] BAKBASAC              BAUDINAULTA           BÉNARDF               CAKANLARY            
+[153] CASANAS-CARBALLIDOJ   CHAMPA                CHASSAGNEP            DHÉEF                
+[157] DREVELLEM             DUTELF                GAGNIÈREV             JAMAULTC             
+[161] LAOTB                 LAZARM                LEININGER-FREZALC     LESTEVENG            
+[165] MAULATJ               MEHDIA                MINSTERC              NGUIAKAHMAW          
+[169] PERSYNN               PLEVENB               PLEVRISK              RAADL                
+[173] REMYS                 SAARELAS              SPIRIJ                TROUDEA              
+[177] VALLEEJ               VANNIERC              VIEILLARD-BARONE      VERONO               
+[181] VILA-VÁZQUEZJ-I       WATELR                BLIDONM               SWERTSE              
+[185] BARLESS               QUEVAC                BAFFIS                BOULARANZ            
+[189] CAPUTOM-L             COTTINEAUC            IGNAZZICOSMOA         LIUCHUNY             
+[193] TOUREILLEE            BRUNG                 COQUELLEJ             ESKANDERA            
+[197] OLMEDOE               CITRONP               FROUILLOUL            GEORGEAULTL          
+[201] BOGNONS               KANELLOPOULOUD        MANTRANM              KIME                 
+[205] MARTYP                FAKHARIANGHOMB        SIVAKH                BROOMBERGJ           
+[209] PERNETA               SIMOESL               BRESA                 MANTRANM             
+[213] AVELINE-DUBACHN       BAUDRYS               BERNADOUD             CHALONGEL            
+[217] CURAR                 DEBRIEJ               DELAVILLED            DENISE               
+[221] DESCLAUX-SALACHASJ    DOSS                  DUBOS-PAILLARDE       DUROUDIERS           
+[225] FINANCEO              GAUJALS               GEORGIKOPOULOSI       GIMATM               
+[229] GIRAUDA               GRAVIERJ              GUÉRINA               KAHNS                
+[233] LAMBERTA              LAMENIEB              LANGARA               LEBIGOTB             
+[237] LECORRET              LEHECE                LEPESANTG             LOPEZP               
+[241] MAGNANM               MALNARD               NAHASSIAL             PATTEM               
+[245] SIMOND                SKOUFOGLOUE           PIERRE-MAGNANIC       QUEYROIF             
+[249] THEBAULTE             VIANACERQUEIRAE       HIRSCHHAUSENBvon      PICHONM              
+[253] GOMESE                SINNOM                TABBITAJ              KOSOWSKA-STAMIROWSKAZ
+[257] RAIMBAULTJ            ZDANOWSKAN            VERHAEGHEL            TELLEO               
+[261] LECLAIREM             REUILLONR             HACHIR                PLATTARDO            
+[265] OTTA-C                DUBREUILA             NUSSBAUMF
